@@ -19,20 +19,6 @@
         "choco": "Chocolatey command"
     },
 }
-
-Example:
-
-{
-    "WPFInstalladobe": {
-        "winget": "Adobe.Acrobat.Reader.64-bit"
-        "choco": "adobereader"
-    },
-    "WPFInstalladvancedip": {
-        "winget": "Famatech.AdvancedIPScanner"
-        "choco": "advanced-ip-scanner"
-    }
-}
-
 #>
 
 #Modify the variables and run his code. It will import the current file and add your addition. From there you can create a pull request.
@@ -73,19 +59,6 @@ $jsonfile | ConvertTo-Json | Out-File ./config/applications.json
         "commands"
     ]
 }
-
-Example:
-{
-    "Featurewsl": [
-        "VirtualMachinePlatform",
-        "Microsoft-Windows-Subsystem-Linux"
-    ],
-    "Featurenfs": [
-        "ServicesForNFS-ClientOnly",
-        "ClientForNFS-Infrastructure",
-        "NFS-Administration"
-    ]
-}    
 #>
 
 #Modify the variables and run his code. It will import the current file and add your addition. From there you can create a pull request.
@@ -123,31 +96,6 @@ $jsonfile | ConvertTo-Json | Out-File ./config/feature.json
         "checkboxes to check"
     ]
 }
-
-Example:
-{
-    "laptop": [
-        "EssTweaksAH",
-        "EssTweaksDVR",
-        "EssTweaksHome",
-        "EssTweaksLoc",
-        "EssTweaksOO",
-        "EssTweaksRP",
-        "EssTweaksServices",
-        "EssTweaksStorage",
-        "EssTweaksTele",
-        "EssTweaksWifi",
-        "MiscTweaksLapPower",
-        "MiscTweaksLapNum"
-    ],
-    "minimal": [
-        "EssTweaksHome",
-        "EssTweaksOO",
-        "EssTweaksRP",
-        "EssTweaksServices",
-        "EssTweaksTele"
-    ]
-}    
 #>
 
 #Modify the variables and run his code. It will import the current file and add your addition. From there you can create a pull request.
@@ -218,64 +166,6 @@ $jsonfile | ConvertTo-Json | Out-File ./config/preset.json
         ]
     }
 }
-
-Example:
-
-{
-    EssTweaksAH": {
-        "registry" : [
-            {
-                "Path":  "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\System",
-                "Name":  "EnableActivityFeed",
-                "Type": "DWord",
-                "Value":  "0", 
-                "OriginalValue": "1"
-            },
-            {
-                "Path":  "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\System",
-                "Name":  "PublishUserActivities",
-                "Type": "DWord",
-                "Value":  "0", 
-                "OriginalValue": "1"
-            }
-        ]
-    },
-    "EssTweaksHome": {
-        "service" : [
-            {
-                "Name":  "HomeGroupListener",
-                "StartupType":  "Manual", 
-                "OriginalType": "Automatic"
-            },
-            {
-                "Name":  "HomeGroupProvider",
-                "StartupType":  "Manual", 
-                "OriginalType": "Automatic"
-            }
-        ]
-    },
-    "EssTweaksTele": {
-        "ScheduledTask" : [
-            {
-                "Name":  "Microsoft\\Windows\\Application Experience\\Microsoft Compatibility Appraiser",
-                "State":  "Disabled", 
-                "OriginalState": "Enabled"
-            },                    
-            {
-                "Name":  "Microsoft\\Windows\\Application Experience\\ProgramDataUpdater",
-                "State":  "Disabled", 
-                "OriginalState": "Enabled"
-            }
-        ]
-    },
-    "EssTweaksDeBloat": {
-        "appx": [
-            "Microsoft.Microsoft3DViewer",
-            "Microsoft.AppConnector"
-        ]
-    }
-}
-
 #>
 
 #Modify the variables and run his code. It will import the current file and add your addition. From there you can create a pull request.
@@ -360,14 +250,6 @@ Add-Member -InputObject $jsonfile -MemberType NoteProperty -Name $NameofButton -
         "Secondary": "IP address"
     ]
 }
-
-Example:
-{
-    "Cloudflare":{
-        "Primary": "1.1.1.1",
-        "Secondary": "1.0.0.1"
-    }
-}    
 #>
 
 #Modify the variables and run his code. It will import the current file and add your addition. From there you can create a pull request.
