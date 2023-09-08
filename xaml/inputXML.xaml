@@ -261,11 +261,9 @@
                                 <CheckBox Name="WPFInstallonlyoffice" Content="ONLYOFFICE Desktop" Margin="5,0"/>
                                 <CheckBox Name="WPFInstalllibreoffice" Content="LibreOffice" Margin="5,0"/>
                                 <CheckBox Name="WPFInstallwinmerge" Content="WinMerge" Margin="5,0"/>
-                                <CheckBox Name="WPFInstallevince" Content="Evince" Margin="5,0"/>
                                 <CheckBox Name="WPFInstallscribus" Content="Scribus" Margin="5,0"/>
                                 <CheckBox Name="WPFInstallsumatra" Content="Sumatra PDF" Margin="5,0"/>
                                 <CheckBox Name="WPFInstalljoplin" Content="Joplin" Margin="5,0"/>
-                                <CheckBox Name="WPFInstallqownnotes" Content="QOwnNotes" Margin="5,0"/>
                             </StackPanel>
                             <StackPanel Background="{MainBackgroundColor}" SnapsToDevicePixels="True" Grid.Row="1" Grid.Column="1" Margin="10">
                                 <Label Content="Multimèdia" FontSize="16" Margin="5,0"/>
@@ -296,7 +294,7 @@
                                 <Label Content="Seguretat" FontSize="16" Margin="5,0"/>
                                 <CheckBox Name="WPFInstallclamwin" Content="ClamWin" Margin="5,0"/>
                                 <CheckBox Name="WPFInstalleraser" Content="Eraser Classic" Margin="5,0"/>
-                                <CheckBox Name="WPFInstallchecksum" Content="Checksum Control" Margin="5,0"/>
+                                <CheckBox Name="WPFInstallchecksum" Content="RHash" Margin="5,0"/>
                                 <CheckBox Name="WPFInstallkeepass" Content="KeePassXC" Margin="5,0"/>
                                 <CheckBox Name="WPFInstallsandbox" Content="Sandbobie Plus" Margin="5,0"/>
                                 <CheckBox Name="WPFInstallportmaster" Content="Portmaster" Margin="5,0"/>
@@ -307,15 +305,12 @@
                                 <CheckBox Name="WPFInstallzip" Content="7-Zip" Margin="5,0"/>
                                 <CheckBox Name="WPFInstallpeazip" Content="PeaZip" Margin="5,0"/>
                                 <CheckBox Name="WPFInstallbleachbit" Content="BleachBit" Margin="5,0"/>
-                                <CheckBox Name="WPFInstallexplorer" Content="Explorer++" Margin="5,0"/>
+                                <CheckBox Name="WPFInstallexplorer" Content="Double Commander" Margin="5,0"/>
                                 <CheckBox Name="WPFInstallwindir" Content="WinDirStat" Margin="5,0"/>
                                 <CheckBox Name="WPFInstallbulkcrap" Content="Bulk Crap Uninstaller" Margin="5,0"/>
                                 <CheckBox Name="WPFInstallrufus" Content="Rufus" Margin="5,0"/>
-                                <CheckBox Name="WPFInstallventoy" Content="Ventoy" Margin="5,0"/>
                                 <CheckBox Name="WPFInstallrustdesk" Content="RustDesk" Margin="5,0"/>
                                 <CheckBox Name="WPFInstallautohotkey" Content="AutoHotKey" Margin="5,0"/>
-                                <CheckBox Name="WPFInstallredshift" Content="Redshift" Margin="5,0"/>
-                                <CheckBox Name="WPFInstallportableapps" Content="PortableApps" Margin="5,0"/>
                             </StackPanel>
                         </Grid>
                     </TabItem>

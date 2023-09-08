@@ -9,11 +9,9 @@ Brave
 ONLYOFFICE  
 LibreOffice  
 WinMerge  
-Evince  
 Scribus  
 Sumatra PDF  
 Joplin  
-QOwnNotes  
 
 ## Multimèdia
 VLC  
@@ -49,7 +47,7 @@ itch.io
 ## Seguretat
 ClamWin  
 Eraser Classic  
-Checksum Control  
+RHash  
 KeePassXC  
 Sandboxie Plus  
 ### Internet
@@ -60,13 +58,10 @@ Wireshark
 ### Fitxers
 7-Zip  
 BleachBit  
-Explorer++  
+Double Commander  
 WinDirStat  
 Bulk Crap Uninstaller  
 ### Altres
 Rufus  
-Ventoy  
 RustDesk  
 AutoHotkey  
-Redshift  
-PortableApps  

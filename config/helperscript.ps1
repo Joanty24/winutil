@@ -16,7 +16,7 @@
 {
     "NameofButton": {
         "winget":"Wingetcommand",
-        "choco":"Chocolateycommand"
+        "choco":"na"
     },
 }
 #>
