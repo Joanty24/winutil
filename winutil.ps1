@@ -2042,7 +2042,7 @@ $inputXML = '<Window x:Class="WinUtility.MainWindow"
         mc:Ignorable="d"
         Background="{MainBackgroundColor}"
         WindowStartupLocation="CenterScreen"
-        Title="Open Windows Utility" Height="800" Width="1200">
+        Title="Open Windows Utility" Height="700" Width="1100">
     
     <Window.Resources>
         <Style TargetType="ComboBox">
@@ -2249,7 +2249,7 @@ $inputXML = '<Window x:Class="WinUtility.MainWindow"
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <DockPanel Background="{MainBackgroundColor}" SnapsToDevicePixels="True" Grid.Row="0" Width="1100">
+                <DockPanel Background="{MainBackgroundColor}" SnapsToDevicePixels="True" Grid.Row="0" Width="1050">
                     <Button Content="Install" HorizontalAlignment="Left" Height="40" Width="100" 
                         Background="{ButtonInstallBackgroundColor}" Foreground="{ButtonInstallForegroundColor}" FontWeight="Bold" Name="WPFTab1BT"/>
                     <Button Content="Tweaks" HorizontalAlignment="Left" Height="40" Width="100" 
@@ -2273,7 +2273,7 @@ $inputXML = '<Window x:Class="WinUtility.MainWindow"
                                 <RowDefinition Height=".10*"/>
                                 <RowDefinition Height=".90*"/>
                             </Grid.RowDefinitions>
-                            <StackPanel Background="{MainBackgroundColor}" Orientation="Horizontal" Grid.Row="0" HorizontalAlignment="Center" Grid.Column="0" Grid.ColumnSpan="3" Margin="10">
+                            <StackPanel Background="{MainBackgroundColor}" Orientation="Horizontal" Grid.Row="0" HorizontalAlignment="Center" Grid.Column="0" Grid.ColumnSpan="3" Margin="9">
                                 <Label Content="Winget:" FontSize="17" VerticalAlignment="Center"/>
                                 <Button Name="WPFinstall" Content=" Install Selection " Margin="7"/>
                                 <Button Name="WPFInstallUpgrade" Content=" Upgrade All " Margin="7"/>
@@ -2281,7 +2281,7 @@ $inputXML = '<Window x:Class="WinUtility.MainWindow"
                                 <Button Name="WPFGetInstalled" Content=" Get Installed " Margin="7"/>
                                 <Button Name="WPFclearWinget" Content=" Clear Selection " Margin="7"/>
                             </StackPanel>
-                            <StackPanel Background="{MainBackgroundColor}" Orientation="Horizontal" Grid.Row="0" HorizontalAlignment="Center" Grid.Column="3" Grid.ColumnSpan="2" Margin="10">
+                            <StackPanel Background="{MainBackgroundColor}" Orientation="Horizontal" Grid.Row="0" HorizontalAlignment="Center" Grid.Column="3" Grid.ColumnSpan="2" Margin="9">
                                 <Label Content="Configuration File:" FontSize="17" VerticalAlignment="Center"/>
                                 <Button Name="WPFimportWinget" Content=" Import " Margin="7"/>
                                 <Button Name="WPFexportWinget" Content=" Export " Margin="7"/>
