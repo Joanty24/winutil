@@ -14,9 +14,9 @@
     The structure of the json is as follows
 
 {
-    "Name of Button": {
-        "winget": "Winget command"
-        "choco": "Chocolatey command"
+    "NameofButton": {
+        "winget":"Wingetcommand",
+        "choco":"Chocolateycommand"
     },
 }
 #>

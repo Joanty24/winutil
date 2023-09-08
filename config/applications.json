@@ -1,126 +1,206 @@
 {
-  "WPFInstallaudacity": {
-    "winget": "Audacity.Audacity",
-    "choco": "audacity"
+  "WPFInstallfirefox":{
+    "winget":"Wingetcommand",
+    "choco":"Chocolateycommand"
   },
-  "WPFInstallautohotkey": {
-    "winget": "AutoHotkey.AutoHotkey",
-    "choco": "autohotkey"
+  "WPFInstalllibrewolf":{
+    "winget":"Wingetcommand",
+    "choco":"Chocolateycommand"
   },
-  "WPFInstallblender": {
-    "winget": "BlenderFoundation.Blender",
-    "choco": "blender"
+  "WPFInstallchromium":{
+    "winget":"Wingetcommand",
+    "choco":"Chocolateycommand"
   },
-  "WPFInstallbrave": {
-    "winget": "Brave.Brave",
-    "choco": "brave"
+  "WPFInstallbrave":{
+    "winget":"Wingetcommand",
+    "choco":"Chocolateycommand"
   },
-  "WPFInstallbulkcrapuninstaller": {
-    "winget": "Klocman.BulkCrapUninstaller",
-    "choco": "bulk-crap-uninstaller"
+  "WPFInstallonlyoffice":{
+    "winget":"Wingetcommand",
+    "choco":"Chocolateycommand"
   },
-  "WPFInstallchromium": {
-    "winget": "eloston.ungoogled-chromium",
-    "choco": "chromium"
+  "WPFInstalllibreoffice":{
+    "winget":"Wingetcommand",
+    "choco":"Chocolateycommand"
   },
-  "WPFInstallfirefox": {
-    "winget": "Mozilla.Firefox",
-    "choco": "firefox"
+  "WPFInstallwinmerge":{
+    "winget":"Wingetcommand",
+    "choco":"Chocolateycommand"
   },
-  "WPFInstallgimp": {
-    "winget": "GIMP.GIMP",
-    "choco": "gimp"
+  "WPFInstallevince":{
+    "winget":"Wingetcommand",
+    "choco":"Chocolateycommand"
   },
-  "WPFInstallheroiclauncher": {
-    "winget": "HeroicGamesLauncher.HeroicGamesLauncher",
-    "choco": "na" 
+  "WPFInstallscribus":{
+    "winget":"Wingetcommand",
+    "choco":"Chocolateycommand"
   },
-  "WPFInstallhandbrake": {
-    "winget": "HandBrake.HandBrake",
-    "choco": "handbrake"
+  "WPFInstallsumatra":{
+    "winget":"Wingetcommand",
+    "choco":"Chocolateycommand"
   },
-  "WPFInstallinkscape": {
-    "winget": "Inkscape.Inkscape",
-    "choco": "inkscape"
+  "WPFInstalljoplin":{
+    "winget":"Wingetcommand",
+    "choco":"Chocolateycommand"
   },
-  "WPFInstallkeepass": {
-    "winget": "KeePassXCTeam.KeePassXC",
-    "choco": "keepassxc"
+  "WPFInstallqownnotes":{
+    "winget":"Wingetcommand",
+    "choco":"Chocolateycommand"
   },
-  "WPFInstalllibrewolf": {
-    "winget": "LibreWolf.LibreWolf",
-    "choco": "librewolf"
+  "WPFInstallvlc":{
+    "winget":"Wingetcommand",
+    "choco":"Chocolateycommand"
   },
-  "WPFInstallnotepadplus": {
-    "winget": "Notepad++.Notepad++",
-    "choco": "notepadplusplus"
+  "WPFInstallobs":{
+    "winget":"Wingetcommand",
+    "choco":"Chocolateycommand"
   },
-  "WPFInstallobs": {
-    "winget": "OBSProject.OBSStudio",
-    "choco": "obs-studio"
+  "WPFInstallspotube":{
+    "winget":"Wingetcommand",
+    "choco":"Chocolateycommand"
   },
-  "WPFInstallrufus": {
-    "winget": "Rufus.Rufus",
-    "choco": "rufus"
+  "WPFInstallcider":{
+    "winget":"Wingetcommand",
+    "choco":"Chocolateycommand"
   },
-  "WPFInstallsevenzip": {
-    "winget": "7zip.7zip",
-    "choco": "7zip"
+  "WPFInstalldownloader":{
+    "winget":"Wingetcommand",
+    "choco":"Chocolateycommand"
   },
-  "WPFInstallsumatra": {
-    "winget": "SumatraPDF.SumatraPDF",
-    "choco": "sumatrapdf"
+  "WPFInstallaudacity":{
+    "winget":"Wingetcommand",
+    "choco":"Chocolateycommand"
   },
-  "WPFInstallvlc": {
-    "winget": "VideoLAN.VLC",
-    "choco": "vlc"
+  "WPFInstallgimp":{
+    "winget":"Wingetcommand",
+    "choco":"Chocolateycommand"
   },
-  "WPFInstallvscodium": {
-    "winget": "Git.Git;VSCodium.VSCodium",
-    "choco": "vscodium"
+  "WPFInstallkrita":{
+    "winget":"Wingetcommand",
+    "choco":"Chocolateycommand"
   },
-  "WPFInstallwindirstat": {
-    "winget": "WinDirStat.WinDirStat",
-    "choco": "windirstat"
+  "WPFInstalldarktable":{
+    "winget":"Wingetcommand",
+    "choco":"Chocolateycommand"
   },
-  "WPFInstallwireshark": {
-    "winget": "WiresharkFoundation.Wireshark",
-    "choco": "wireshark"
+  "WPFInstallinkscape":{
+    "winget":"Wingetcommand",
+    "choco":"Chocolateycommand"
   },
-  "WPFInstalllibreoffice": {
-    "winget": "TheDocumentFoundation.LibreOffice",
-    "choco": "libreoffice-fresh"
+  "WPFInstallcaesium":{
+    "winget":"Wingetcommand",
+    "choco":"Chocolateycommand"
   },
-  "WPFInstallsandboxie": {
-    "winget": "Sandboxie.Plus",
-    "choco": "sandboxie"
+  "WPFInstallkdenlive":{
+    "winget":"Wingetcommand",
+    "choco":"Chocolateycommand"
   },
-  "WPFInstallwinmerge": {
-    "winget": "WinMerge.WinMerge",
-    "choco": "winmerge"
+  "WPFInstallhandbrake":{
+    "winget":"Wingetcommand",
+    "choco":"Chocolateycommand"
   },
-  "WPFInstallonlyoffice": {
-    "winget": "ONLYOFFICE.DesktopEditors",
-    "choco": "onlyoffice"
+  "WPFInstallblender":{
+    "winget":"Wingetcommand",
+    "choco":"Chocolateycommand"
   },
-  "WPFInstallcider": {
-    "winget": "CiderCollective.Cider",
-    "choco": "cider"
+  "WPFInstallfreecad":{
+    "winget":"Wingetcommand",
+    "choco":"Chocolateycommand"
   },
-  "WPFInstalljoplin": {
-    "winget": "Joplin.Joplin",
-    "choco": "joplin"
+  "WPFInstallcodium":{
+    "winget":"Wingetcommand",
+    "choco":"Chocolateycommand"
   },
-  "WPFInstallrustdesk": {
-    "winget": "RustDesk.RustDesk",
-    "choco": "rustdesk.portable"
+  "WPFInstallnotepad":{
+    "winget":"Wingetcommand",
+    "choco":"Chocolateycommand"
   },
-  "WPFInstallkdenlive": {
-    "Winget": "KDE.Kdenlive",
-    "choco": "kdenlive"
+  "WPFInstallplaynite":{
+    "winget":"Wingetcommand",
+    "choco":"Chocolateycommand"
   },
-  "WPFInstallkrita": {
-    "winget": "KDE.Krita",
-    "choco": "krita"
+  "WPFInstallheroic":{
+    "winget":"Wingetcommand",
+    "choco":"Chocolateycommand"
+  },
+  "WPFInstallitchio":{
+    "winget":"Wingetcommand",
+    "choco":"Chocolateycommand"
+  },
+  "WPFInstallclamwin":{
+    "winget":"Wingetcommand",
+    "choco":"Chocolateycommand"
+  },
+  "WPFInstalleraser":{
+    "winget":"Wingetcommand",
+    "choco":"Chocolateycommand"
+  },
+  "WPFInstallchecksum":{
+    "winget":"Wingetcommand",
+    "choco":"Chocolateycommand"
+  },
+  "WPFInstallkeepass":{
+    "winget":"Wingetcommand",
+    "choco":"Chocolateycommand"
+  },
+  "WPFInstallsandbox":{
+    "winget":"Wingetcommand",
+    "choco":"Chocolateycommand"
+  },
+  "WPFInstallportmaster":{
+    "winget":"Wingetcommand",
+    "choco":"Chocolateycommand"
+  },
+  "WPFInstallwireshark":{
+    "winget":"Wingetcommand",
+    "choco":"Chocolateycommand"
+  },
+  "WPFInstallzip":{
+    "winget":"Wingetcommand",
+    "choco":"Chocolateycommand"
+  },
+  "WPFInstallpeazip":{
+    "winget":"Wingetcommand",
+    "choco":"Chocolateycommand"
+  },
+  "WPFInstallbleachbit":{
+    "winget":"Wingetcommand",
+    "choco":"Chocolateycommand"
+  },
+  "WPFInstallexplorer":{
+    "winget":"Wingetcommand",
+    "choco":"Chocolateycommand"
+  },
+  "WPFInstallwindir":{
+    "winget":"Wingetcommand",
+    "choco":"Chocolateycommand"
+  },
+  "WPFInstallbulkcrap":{
+    "winget":"Wingetcommand",
+    "choco":"Chocolateycommand"
+  },
+  "WPFInstallrufus":{
+    "winget":"Wingetcommand",
+    "choco":"Chocolateycommand"
+  },
+  "WPFInstallventoy":{
+    "winget":"Wingetcommand",
+    "choco":"Chocolateycommand"
+  },
+  "WPFInstallrustdesk":{
+    "winget":"Wingetcommand",
+    "choco":"Chocolateycommand"
+  },
+  "WPFInstallautohotkey":{
+    "winget":"Wingetcommand",
+    "choco":"Chocolateycommand"
+  },
+  "WPFInstallredshift":{
+    "winget":"Wingetcommand",
+    "choco":"Chocolateycommand"
+  },
+  "WPFInstallportableapps":{
+    "winget":"Wingetcommand",
+    "choco":"Chocolateycommand"
   }
 }
