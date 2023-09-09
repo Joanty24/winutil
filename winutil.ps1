@@ -8,7 +8,7 @@
 <#
 .NOTES
     GitHub         : https://github.com/Joanty24/winutil
-    Version        : 230909_2359-Joan
+    Version        : 230910_0011-Joan
 #>
 
 Start-Transcript $ENV:TEMP\Winutil.log -Append
@@ -19,7 +19,7 @@ Add-Type -AssemblyName System.Windows.Forms
 # variable to sync between runspaces
 $sync = [Hashtable]::Synchronized(@{})
 $sync.PSScriptRoot = $PSScriptRoot
-$sync.version = "230909_2359-Joan"
+$sync.version = "230910_0011-Joan"
 $sync.configs = @{}
 $sync.ProcessRunning = $false
 
@@ -2525,188 +2525,142 @@ $inputXML = '<Window x:Class="WinUtility.MainWindow"
 </Window>'
 $sync.configs.applications = '{
   "WPFInstallfirefox":{
-    "winget":"Mozilla.Firefox",
-    "choco":"na"
+    "winget":"Mozilla.Firefox"
   },
   "WPFInstalllibrewolf":{
-    "winget":"LibreWolf.LibreWolf",
-    "choco":"na"
+    "winget":"LibreWolf.LibreWolf"
   },
   "WPFInstallchromium":{
-    "winget":"eloston.ungoogled-chromium",
-    "choco":"na"
+    "winget":"eloston.ungoogled-chromium"
   },
   "WPFInstallbrave":{
-    "winget":"Brave.Brave",
-    "choco":"na"
+    "winget":"Brave.Brave"
   },
   "WPFInstallonlyoffice":{
-    "winget":"ONLYOFFICE.DesktopEditors",
-    "choco":"na"
+    "winget":"ONLYOFFICE.DesktopEditors"
   },
   "WPFInstalllibreoffice":{
-    "winget":"TheDocumentFoundation.LibreOffice",
-    "choco":"na"
+    "winget":"TheDocumentFoundation.LibreOffice"
   },
   "WPFInstallwinmerge":{
-    "winget":"WinMerge.WinMerge",
-    "choco":"na"
+    "winget":"WinMerge.WinMerge"
   },
   "WPFInstallscribus":{
-    "winget":"Scribus.Scribus",
-    "choco":"na"
+    "winget":"Scribus.Scribus"
   },
   "WPFInstallsumatra":{
-    "winget":"SumatraPDF.SumatraPDF",
-    "choco":"na"
+    "winget":"SumatraPDF.SumatraPDF"
   },
   "WPFInstalljoplin":{
-    "winget":"Joplin.Joplin",
-    "choco":"na"
+    "winget":"Joplin.Joplin"
   },
   "WPFInstallvlc":{
-    "winget":"VideoLAN.VLC",
-    "choco":"na"
+    "winget":"VideoLAN.VLC"
   },
   "WPFInstallobs":{
-    "winget":"OBSProject.OBSStudio",
-    "choco":"na"
+    "winget":"OBSProject.OBSStudio"
   },
   "WPFInstallspotube":{
-    "winget":"KRTirtho.Spotube",
-    "choco":"na"
+    "winget":"KRTirtho.Spotube"
   },
   "WPFInstallcider":{
-    "winget":"CiderCollective.Cider",
-    "choco":"na"
+    "winget":"CiderCollective.Cider"
   },
   "WPFInstalldownloader":{
-    "winget":"subhra74.XtremeDownloadManager",
-    "choco":"na"
+    "winget":"subhra74.XtremeDownloadManager"
   },
   "WPFInstallaudacity":{
-    "winget":"Audacity.Audacity",
-    "choco":"na"
+    "winget":"Audacity.Audacity"
   },
   "WPFInstallgimp":{
-    "winget":"GIMP.GIMP",
-    "choco":"na"
+    "winget":"GIMP.GIMP"
   },
   "WPFInstallkrita":{
-    "winget":"KDE.Krita",
-    "choco":"na"
+    "winget":"KDE.Krita"
   },
   "WPFInstalldarktable":{
-    "winget":"darktable.darktable",
-    "choco":"na"
+    "winget":"darktable.darktable"
   },
   "WPFInstallinkscape":{
-    "winget":"Inkscape.Inkscape",
-    "choco":"na"
+    "winget":"Inkscape.Inkscape"
   },
   "WPFInstallcaesium":{
-    "winget":"SaeraSoft.CaesiumImageCompressor",
-    "choco":"na"
+    "winget":"SaeraSoft.CaesiumImageCompressor"
   },
   "WPFInstallkdenlive":{
-    "winget":"KDE.Kdenlive",
-    "choco":"na"
+    "winget":"KDE.Kdenlive"
   },
   "WPFInstallhandbrake":{
-    "winget":"HandBrake.HandBrake",
-    "choco":"na"
+    "winget":"HandBrake.HandBrake"
   },
   "WPFInstallblender":{
-    "winget":"BlenderFoundation.Blender",
-    "choco":"na"
+    "winget":"BlenderFoundation.Blender"
   },
   "WPFInstallfreecad":{
-    "winget":"FreeCAD.FreeCAD",
-    "choco":"na"
+    "winget":"FreeCAD.FreeCAD"
   },
   "WPFInstallcodium":{
-    "winget":"VSCodium.VSCodium",
-    "choco":"na"
+    "winget":"VSCodium.VSCodium"
   },
   "WPFInstallnotepad":{
-    "winget":"Notepad++.Notepad++",
-    "choco":"na"
+    "winget":"Notepad++.Notepad++"
   },
   "WPFInstallplaynite":{
-    "winget":"Playnite.Playnite",
-    "choco":"na"
+    "winget":"Playnite.Playnite"
   },
   "WPFInstallheroic":{
-    "winget":"HeroicGamesLauncher.HeroicGamesLauncher",
-    "choco":"na"
+    "winget":"HeroicGamesLauncher.HeroicGamesLauncher"
   },
   "WPFInstallitchio":{
-    "winget":"ItchIO.Itch",
-    "choco":"na"
+    "winget":"ItchIO.Itch"
   },
   "WPFInstallclamwin":{
-    "winget":"ClamWin.ClamWin",
-    "choco":"na"
+    "winget":"ClamWin.ClamWin"
   },
   "WPFInstalleraser":{
-    "winget":"Eraser.Eraser",
-    "choco":"na"
+    "winget":"Eraser.Eraser"
   },
   "WPFInstallchecksum":{
-    "winget":"Rhash.RHash",
-    "choco":"na"
+    "winget":"Rhash.RHash"
   },
   "WPFInstallkeepass":{
-    "winget":"KeePassXCTeam.KeePassXC",
-    "choco":"na"
+    "winget":"KeePassXCTeam.KeePassXC"
   },
   "WPFInstallsandbox":{
-    "winget":"Sandboxie.Plus",
-    "choco":"na"
+    "winget":"Sandboxie.Plus"
   },
   "WPFInstallportmaster":{
-    "winget":"Safing.Portmaster",
-    "choco":"na"
+    "winget":"Safing.Portmaster"
   },
   "WPFInstallwireshark":{
-    "winget":"WiresharkFoundation.Wireshark",
-    "choco":"na"
+    "winget":"WiresharkFoundation.Wireshark"
   },
   "WPFInstallzip":{
-    "winget":"7zip.7zip",
-    "choco":"na"
+    "winget":"7zip.7zip"
   },
   "WPFInstallpeazip":{
-    "winget":"Giorgiotani.Peazip",
-    "choco":"na"
+    "winget":"Giorgiotani.Peazip"
   },
   "WPFInstallbleachbit":{
-    "winget":"BleachBit.BleachBit",
-    "choco":"na"
+    "winget":"BleachBit.BleachBit"
   },
   "WPFInstallexplorer":{
-    "winget":"alexx2000.DoubleCommander",
-    "choco":"na"
+    "winget":"alexx2000.DoubleCommander"
   },
   "WPFInstallwindir":{
-    "winget":"WinDirStat.WinDirStat",
-    "choco":"na"
+    "winget":"WinDirStat.WinDirStat"
   },
   "WPFInstallbulkcrap":{
-    "winget":"Wingetcommand",
-    "choco":"na"
+    "winget":"Wingetcommand"
   },
   "WPFInstallrufus":{
-    "winget":"Rufus.Rufus",
-    "choco":"na"
+    "winget":"Rufus.Rufus"
   },
   "WPFInstallrustdesk":{
-    "winget":"RustDesk.RustDesk",
-    "choco":"na"
+    "winget":"RustDesk.RustDesk"
   },
   "WPFInstallautohotkey":{
-    "winget":"AutoHotkey.AutoHotkey",
-    "choco":"na"
+    "winget":"AutoHotkey.AutoHotkey"
   }
 }' | convertfrom-json
 $sync.configs.dns = '{
