@@ -279,8 +279,8 @@
                                 <CheckBox Name="WPFInstallcaesium" Content="Caesium" Margin="5,0" ToolTip="Compressor d'imatges"/>
                                 <CheckBox Name="WPFInstallkdenlive" Content="Kdenlive" Margin="5,0" ToolTip="Editor de vídeo"/>
                                 <CheckBox Name="WPFInstallhandbrake" Content="Handbrake" Margin="5,0" ToolTip="Codificador de vídeo"/>
-                                <CheckBox Name="WPFInstallblender" Content="Blender" Margin="5,0"/ ToolTip="Creador multimèdia">
-                                <CheckBox Name="WPFInstallfreecad" Content="FreeCAD" Margin="5,0"/ ToolTip="CAD lliure">
+                                <CheckBox Name="WPFInstallblender" Content="Blender" Margin="5,0" ToolTip="Creador multimèdia"/>
+                                <CheckBox Name="WPFInstallfreecad" Content="FreeCAD" Margin="5,0" ToolTip="CAD lliure"/>
                             </StackPanel>
                             <StackPanel Background="{MainBackgroundColor}" SnapsToDevicePixels="True" Grid.Row="1" Grid.Column="2" Margin="10">
                                 <Label Content="Programació" FontSize="16" Margin="5,0"/>

@@ -8,7 +8,7 @@
 <#
 .NOTES
     GitHub         : https://github.com/Joanty24/winutil
-    Version        : 230909_1835-Joan
+    Version        : 230909_1845-Joan
 #>
 
 Start-Transcript $ENV:TEMP\Winutil.log -Append
@@ -19,7 +19,7 @@ Add-Type -AssemblyName System.Windows.Forms
 # variable to sync between runspaces
 $sync = [Hashtable]::Synchronized(@{})
 $sync.PSScriptRoot = $PSScriptRoot
-$sync.version = "230909_1835-Joan"
+$sync.version = "230909_1845-Joan"
 $sync.configs = @{}
 $sync.ProcessRunning = $false
 
@@ -2314,8 +2314,8 @@ $inputXML = '<Window x:Class="WinUtility.MainWindow"
                                 <CheckBox Name="WPFInstallcaesium" Content="Caesium" Margin="5,0" ToolTip="Compressor d''imatges"/>
                                 <CheckBox Name="WPFInstallkdenlive" Content="Kdenlive" Margin="5,0" ToolTip="Editor de v?deo"/>
                                 <CheckBox Name="WPFInstallhandbrake" Content="Handbrake" Margin="5,0" ToolTip="Codificador de v?deo"/>
-                                <CheckBox Name="WPFInstallblender" Content="Blender" Margin="5,0"/ ToolTip="Creador multim?dia">
-                                <CheckBox Name="WPFInstallfreecad" Content="FreeCAD" Margin="5,0"/ ToolTip="CAD lliure">
+                                <CheckBox Name="WPFInstallblender" Content="Blender" Margin="5,0" ToolTip="Creador multim?dia"/>
+                                <CheckBox Name="WPFInstallfreecad" Content="FreeCAD" Margin="5,0" ToolTip="CAD lliure"/>
                             </StackPanel>
                             <StackPanel Background="{MainBackgroundColor}" SnapsToDevicePixels="True" Grid.Row="1" Grid.Column="2" Margin="10">
                                 <Label Content="Programaci?" FontSize="16" Margin="5,0"/>
