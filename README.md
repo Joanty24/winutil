@@ -15,4 +15,6 @@ iex(irm https://winutil.joansolana.com/winutil.ps1)
 iex(irm winutil.joansolana.com/winutil.ps1)
 ```
 
+La branca de la meva utilitat es la "tdr", la "main" és per mantenir-me actualitzat amb el projecte de CTT.
+
 Aquesta utilitat forma part de la part practica del meu Treball De Recerca.
