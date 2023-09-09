@@ -18,6 +18,6 @@ $sync.ProcessRunning = $false
 
 
 if (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
-    Write-Output "Winutil needs to be run as Administrator."
+    Write-Output "La utilitat s'ha d'executar amb permis d'Administrador"
     break
 }
