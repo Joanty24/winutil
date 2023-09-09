@@ -8,7 +8,7 @@
 <#
 .NOTES
     GitHub         : https://github.com/Joanty24/winutil
-    Version        : 230909_2034-Joan
+    Version        : 230909_2102-Joan
 #>
 
 Start-Transcript $ENV:TEMP\Winutil.log -Append
@@ -19,7 +19,7 @@ Add-Type -AssemblyName System.Windows.Forms
 # variable to sync between runspaces
 $sync = [Hashtable]::Synchronized(@{})
 $sync.PSScriptRoot = $PSScriptRoot
-$sync.version = "230909_2034-Joan"
+$sync.version = "230909_2102-Joan"
 $sync.configs = @{}
 $sync.ProcessRunning = $false
 
@@ -2293,17 +2293,12 @@ $inputXML = '<Window x:Class="WinUtility.MainWindow"
                                 <Button Name="WPFInstallUpgrade" Content=" Upgrade All " Margin="7"/>
                                 <Button Name="WPFuninstall" Content=" Uninstall Selection " Margin="7"/>
                                 <Button Name="WPFGetInstalled" Content=" Get Installed " Margin="7"/>
-                                <Button Name="WPFclearWinget" Content=" Clear Selection " Margin="7"/>
+                                <Button Name="WPFclearWinget" Content=" Esclarir Seleccio " Margin="7"/>
                             </StackPanel>
                             <StackPanel Background="{MainBackgroundColor}" Orientation="Horizontal" Grid.Row="0" HorizontalAlignment="Center" Grid.Column="3" Grid.ColumnSpan="2" Margin="9">
                                 <Label Content="Configuration File:" FontSize="17" VerticalAlignment="Center"/>
                                 <Button Name="WPFimportWinget" Content=" Import " Margin="7"/>
                                 <Button Name="WPFexportWinget" Content=" Export " Margin="7"/>
-                            </StackPanel>
-                            <StackPanel Background="{MainBackgroundColor}" Orientation="Horizontal" Grid.Row="21" HorizontalAlignment="Center" Grid.ColumnSpan="2" Margin="9">
-                                <TextBlock Padding="9">
-                                    Passa el punter per sobre dels noms per obtindre una descripcio.
-                                </TextBlock>
                             </StackPanel>
                             <StackPanel Background="{MainBackgroundColor}" SnapsToDevicePixels="True" Grid.Row="1" Grid.Column="0" Margin="9">
                                 <Label Content="Navegadors" FontSize="16" Margin="5,0"/>
@@ -2366,6 +2361,11 @@ $inputXML = '<Window x:Class="WinUtility.MainWindow"
                                 <CheckBox Name="WPFInstallrustdesk" Content="RustDesk" Margin="5,0" ToolTip="Escriptori remot"/>
                                 <CheckBox Name="WPFInstallautohotkey" Content="AutoHotKey" Margin="5,0" ToolTip="Scrips de teclat"/>
                             </StackPanel>
+                            <StackPanel Background="{MainBackgroundColor}" Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Center" Grid.ColumnSpan="2" Margin="9">
+                                <TextBlock Padding="9">
+                                    Passa el punter per sobre dels noms per obtindre una descripcio.
+                                </TextBlock>
+                            </StackPanel>
                         </Grid>
                     </TabItem>
                     <TabItem Header="Tweaks" Visibility="Collapsed" Name="WPFTab2">
@@ -2381,11 +2381,11 @@ $inputXML = '<Window x:Class="WinUtility.MainWindow"
                             </Grid.RowDefinitions>
                             <StackPanel Background="{MainBackgroundColor}" Orientation="Horizontal" Grid.Row="0" HorizontalAlignment="Center" Grid.Column="0" Margin="9">
                                 <Label Content="Recommended Selections:" FontSize="17" VerticalAlignment="Center"/>
-                                <Button Name="WPFdesktop" Content=" Desktop " Margin="7"/>
-                                <Button Name="WPFlaptop" Content=" Laptop " Margin="7"/>
-                                <Button Name="WPFminimal" Content=" Minimal " Margin="7"/>
-                                <Button Name="WPFclear" Content=" Clear " Margin="7"/>
-                                <Button Name="WPFGetInstalledTweaks" Content=" Get Installed " Margin="7"/>
+                                <Button Name="WPFdesktop" Content=" Torre " Margin="7"/>
+                                <Button Name="WPFlaptop" Content=" Portatil " Margin="7"/>
+                                <Button Name="WPFminimal" Content=" Basic " Margin="7"/>
+                                <Button Name="WPFclear" Content=" Esclarir " Margin="7"/>
+                                <Button Name="WPFGetInstalledTweaks" Content=" Actuals " Margin="7"/>
                             </StackPanel>
                             <StackPanel Background="{MainBackgroundColor}" Orientation="Horizontal" Grid.Row="0" HorizontalAlignment="Center" Grid.Column="1" Margin="9">
                                 <Label Content="Configuration File:" FontSize="17" VerticalAlignment="Center"/>
@@ -2394,9 +2394,9 @@ $inputXML = '<Window x:Class="WinUtility.MainWindow"
                             </StackPanel>
                             <StackPanel Background="{MainBackgroundColor}" Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Center" Grid.ColumnSpan="2" Margin="9">
                                 <TextBlock Padding="9">
-                                    Passa el punter per sobre dels noms per obtindre una descripcio.
+                                    Els valors predefinits son per usuaris normals. Si no vols notar cap diferencia estetica tria l''opcio "basic".
                                     <LineBreak/>
-                                    Els valors predefinits son per usuaris normals. es important anar amb compte per no trencar el sistema!
+                                    Passa el punter per sobre dels noms per obtindre una descripcio. Es important anar amb compte per no trencar el sistema!
                                 </TextBlock>
                             </StackPanel>
                             <StackPanel Background="{MainBackgroundColor}" SnapsToDevicePixels="True" Grid.Row="1" Grid.Column="0" Margin="10,5">
@@ -2436,7 +2436,7 @@ $inputXML = '<Window x:Class="WinUtility.MainWindow"
                                 <CheckBox Name="WPFMiscTweaksPower" Content="Disable Power Throttling" Margin="5,0" ToolTip="This is mainly for Laptops, It disables Power Throttling and will use more battery."/>
                                 <CheckBox Name="WPFMiscTweaksLapPower" Content="Enable Power Throttling" Margin="5,0" ToolTip="ONLY FOR LAPTOPS! Do not use on a desktop."/>
                                 <CheckBox Name="WPFMiscTweaksNum" Content="Enable NumLock on Startup" Margin="5,0" ToolTip="This creates a time vortex and sends you back to the past... or it simply turns numlock on at startup"/>
-                                <CheckBox Name="WPFMiscTweaksLapNum" Content="Disable Numlock on Startup" Margin="5,0" ToolTip="Disables Numlock... Very useful when you are on a laptop WITHOUT 9-key and this fixes that issue when the numlock is enabled!"/>
+                                <CheckBox Name="WPFMiscTweaksLapNum" Content="Disable NumLock on Startup" Margin="5,0" ToolTip="Disables Numlock... Very useful when you are on a laptop WITHOUT 9-key and this fixes that issue when the numlock is enabled!"/>
                                 <CheckBox Name="WPFMiscTweaksExt" Content="Show File Extensions" Margin="5,0"/>
                                 <CheckBox Name="WPFMiscTweaksDisplay" Content="Set Display for Performance" Margin="5,0" ToolTip="Sets the system preferences to performance. You can do this manually with sysdm.cpl as well."/>
                                 <CheckBox Name="WPFMiscTweaksUTC" Content="Set Time to UTC (Dual Boot)" Margin="5,0" ToolTip="Essential for computers that are dual booting. Fixes the time sync with Linux Systems."/>
@@ -2808,34 +2808,44 @@ $sync.configs.feature = '{
 }' | convertfrom-json
 $sync.configs.preset = '{
   "desktop": [
-    "WPFEssTweaksAH",
-    "WPFEssTweaksDVR",
-    "WPFEssTweaksHiber",
-    "WPFEssTweaksHome",
-    "WPFEssTweaksLoc",
-    "WPFEssTweaksServices",
-    "WPFEssTweaksStorage",
     "WPFEssTweaksTele",
     "WPFEssTweaksWifi",
+    "WPFEssTweaksAH",
+    "WPFEssTweaksLoc",
+    "WPFEssTweaksHome",
+    "WPFEssTweaksStorage",
+    "WPFEssTweaksHiber",
     "WPFMiscTweaksPower",
-    "WPFMiscTweaksNum"
+    "WPFMiscTweaksNum",
+    "WPFMiscTweaksExt",
+    "WPFMiscTweaksDisplay",
+    "WPFMiscTweaksUTC",
+    "WPFMiscTweaksDisableMouseAcceleration"
   ],
   "laptop": [
-    "WPFEssTweaksAH",
-    "WPFEssTweaksDVR",
-    "WPFEssTweaksHome",
-    "WPFEssTweaksLoc",
-    "WPFEssTweaksServices",
-    "WPFEssTweaksStorage",
     "WPFEssTweaksTele",
     "WPFEssTweaksWifi",
+    "WPFEssTweaksAH",
+    "WPFEssTweaksLoc",
+    "WPFEssTweaksHome",
+    "WPFEssTweaksStorage",
+    "WPFEssTweaksHiber",
     "WPFMiscTweaksLapPower",
-    "WPFMiscTweaksLapNum"
+    "WPFMiscTweaksLapNum",
+    "WPFMiscTweaksExt",
+    "WPFMiscTweaksDisplay",
+    "WPFMiscTweaksUTC",
+    "WPFMiscTweaksDisableMouseAcceleration"
   ],
   "minimal": [
+    "WPFEssTweaksTele",
+    "WPFEssTweaksWifi",
+    "WPFEssTweaksLoc",
     "WPFEssTweaksHome",
-    "WPFEssTweaksServices",
-    "WPFEssTweaksTele"
+    "WPFEssTweaksHiber",
+    "WPFMiscTweaksExt",
+    "WPFMiscTweaksUTC",
+    "WPFMiscTweaksDisableMouseAcceleration"
   ]
 }' | convertfrom-json
 $sync.configs.themes = '{

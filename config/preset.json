@@ -1,32 +1,42 @@
 {
   "desktop": [
-    "WPFEssTweaksAH",
-    "WPFEssTweaksDVR",
-    "WPFEssTweaksHiber",
-    "WPFEssTweaksHome",
-    "WPFEssTweaksLoc",
-    "WPFEssTweaksServices",
-    "WPFEssTweaksStorage",
     "WPFEssTweaksTele",
     "WPFEssTweaksWifi",
+    "WPFEssTweaksAH",
+    "WPFEssTweaksLoc",
+    "WPFEssTweaksHome",
+    "WPFEssTweaksStorage",
+    "WPFEssTweaksHiber",
     "WPFMiscTweaksPower",
-    "WPFMiscTweaksNum"
+    "WPFMiscTweaksNum",
+    "WPFMiscTweaksExt",
+    "WPFMiscTweaksDisplay",
+    "WPFMiscTweaksUTC",
+    "WPFMiscTweaksDisableMouseAcceleration"
   ],
   "laptop": [
-    "WPFEssTweaksAH",
-    "WPFEssTweaksDVR",
-    "WPFEssTweaksHome",
-    "WPFEssTweaksLoc",
-    "WPFEssTweaksServices",
-    "WPFEssTweaksStorage",
     "WPFEssTweaksTele",
     "WPFEssTweaksWifi",
+    "WPFEssTweaksAH",
+    "WPFEssTweaksLoc",
+    "WPFEssTweaksHome",
+    "WPFEssTweaksStorage",
+    "WPFEssTweaksHiber",
     "WPFMiscTweaksLapPower",
-    "WPFMiscTweaksLapNum"
+    "WPFMiscTweaksLapNum",
+    "WPFMiscTweaksExt",
+    "WPFMiscTweaksDisplay",
+    "WPFMiscTweaksUTC",
+    "WPFMiscTweaksDisableMouseAcceleration"
   ],
   "minimal": [
+    "WPFEssTweaksTele",
+    "WPFEssTweaksWifi",
+    "WPFEssTweaksLoc",
     "WPFEssTweaksHome",
-    "WPFEssTweaksServices",
-    "WPFEssTweaksTele"
+    "WPFEssTweaksHiber",
+    "WPFMiscTweaksExt",
+    "WPFMiscTweaksUTC",
+    "WPFMiscTweaksDisableMouseAcceleration"
   ]
 }
