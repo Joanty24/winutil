@@ -8,7 +8,7 @@
 <#
 .NOTES
     GitHub         : https://github.com/Joanty24/winutil
-    Version        : 230909_1845-Joan
+    Version        : 230909_1910-Joan
 #>
 
 Start-Transcript $ENV:TEMP\Winutil.log -Append
@@ -19,7 +19,7 @@ Add-Type -AssemblyName System.Windows.Forms
 # variable to sync between runspaces
 $sync = [Hashtable]::Synchronized(@{})
 $sync.PSScriptRoot = $PSScriptRoot
-$sync.version = "230909_1845-Joan"
+$sync.version = "230909_1910-Joan"
 $sync.configs = @{}
 $sync.ProcessRunning = $false
 
@@ -2346,7 +2346,7 @@ $inputXML = '<Window x:Class="WinUtility.MainWindow"
                                 <CheckBox Name="WPFInstallrustdesk" Content="RustDesk" Margin="5,0" ToolTip="Escriptori remot"/>
                                 <CheckBox Name="WPFInstallautohotkey" Content="AutoHotKey" Margin="5,0" ToolTip="Scrips de teclat"/>
                             </StackPanel>
-                            <StackPanel Background="{MainBackgroundColor}" Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Center" Grid.ColumnSpan="1" Margin="10">
+                            <StackPanel Background="{MainBackgroundColor}" Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Center" Grid.ColumnSpan="4" Margin="10">
                                 <TextBlock Padding="10">
                                     Passa el punter per sobre dels noms per obtindre una descripci?.
                                 </TextBlock>
