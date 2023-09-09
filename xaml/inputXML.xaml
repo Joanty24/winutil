@@ -250,7 +250,7 @@
                                 <Button Name="WPFimportWinget" Content=" Import " Margin="7"/>
                                 <Button Name="WPFexportWinget" Content=" Export " Margin="7"/>
                             </StackPanel>
-                            <StackPanel Background="{MainBackgroundColor}" Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Center" Grid.Column="1" Grid.ColumnSpan="2" Margin="9">
+                            <StackPanel Background="{MainBackgroundColor}" Orientation="Horizontal" Grid.Row="6" HorizontalAlignment="Center" Grid.Column="1" Grid.ColumnSpan="2" Margin="9">
                                 <Label Content="Passa el punter per sobre dels noms per obtindre una descripcio." FontSize="16" VerticalAlignment="Center"/>
                             </StackPanel>
                             <StackPanel Background="{MainBackgroundColor}" SnapsToDevicePixels="True" Grid.Row="1" Grid.Column="0" Margin="9">

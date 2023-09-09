@@ -8,7 +8,7 @@
 <#
 .NOTES
     GitHub         : https://github.com/Joanty24/winutil
-    Version        : 230909_2015-Joan
+    Version        : 230909_2024-Joan
 #>
 
 Start-Transcript $ENV:TEMP\Winutil.log -Append
@@ -19,7 +19,7 @@ Add-Type -AssemblyName System.Windows.Forms
 # variable to sync between runspaces
 $sync = [Hashtable]::Synchronized(@{})
 $sync.PSScriptRoot = $PSScriptRoot
-$sync.version = "230909_2015-Joan"
+$sync.version = "230909_2024-Joan"
 $sync.configs = @{}
 $sync.ProcessRunning = $false
 
@@ -1178,19 +1178,8 @@ Write-Host "12) Forcing discovery..."
 }
 function Invoke-WPFFormVariables{
 Write-Host""
-Write-Host"    d88b  .d88b.   .d8b.  d8b   db "
-Write-Host"    `8P' .8P  Y8. d8' `8b 888o  88 "
-Write-Host"     88  88    88 88ooo88 88V8o 88 "
-Write-Host"     88  88    88 88~~~88 88 V8o88 "
-Write-Host" db. 88  `8b  d8' 88   88 88  V888 "
-Write-Host" Y8888P   `Y88P'  YP   YP VP   V8P "
-Write-Host""
-Write-Host"     d888888b d8888b. d8888b.      "
-Write-Host"     `~~88~~' 88  `8D 88  `8D      "
-Write-Host"        88    88   88 88oobY'      "
-Write-Host"        88    88   88 88`8b        "
-Write-Host"        88    88  .8D 88 `88.      "
-Write-Host"        YP    Y8888D' 88   YD      "
+Write-Host"===Joan Solana==="
+Write-Host"===    TDR    ==="
 Write-Host""
 }
 function Invoke-WPFGetInstalled {
@@ -2298,7 +2287,7 @@ $inputXML = '<Window x:Class="WinUtility.MainWindow"
                                 <Button Name="WPFimportWinget" Content=" Import " Margin="7"/>
                                 <Button Name="WPFexportWinget" Content=" Export " Margin="7"/>
                             </StackPanel>
-                            <StackPanel Background="{MainBackgroundColor}" Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Center" Grid.Column="1" Grid.ColumnSpan="2" Margin="9">
+                            <StackPanel Background="{MainBackgroundColor}" Orientation="Horizontal" Grid.Row="6" HorizontalAlignment="Center" Grid.Column="1" Grid.ColumnSpan="2" Margin="9">
                                 <Label Content="Passa el punter per sobre dels noms per obtindre una descripcio." FontSize="16" VerticalAlignment="Center"/>
                             </StackPanel>
                             <StackPanel Background="{MainBackgroundColor}" SnapsToDevicePixels="True" Grid.Row="1" Grid.Column="0" Margin="9">
