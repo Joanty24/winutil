@@ -311,7 +311,7 @@
                                 <CheckBox Name="WPFInstallrustdesk" Content="RustDesk" Margin="5,0" ToolTip="Escriptori remot"/>
                                 <CheckBox Name="WPFInstallautohotkey" Content="AutoHotKey" Margin="5,0" ToolTip="Scrips de teclat"/>
                             </StackPanel>
-                            <StackPanel Background="{MainBackgroundColor}" Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Center" Grid.ColumnSpan="2" Margin="9">
+                            <StackPanel Background="{MainBackgroundColor}" Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center" Grid.ColumnSpan="2" Margin="9">
                                 <TextBlock Padding="9">
                                     Passa el punter per sobre dels noms per obtindre una descripcio.
                                 </TextBlock>
