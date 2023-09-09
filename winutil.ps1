@@ -8,7 +8,7 @@
 <#
 .NOTES
     GitHub         : https://github.com/Joanty24/winutil
-    Version        : 230909_1823-Joan
+    Version        : 230909_1835-Joan
 #>
 
 Start-Transcript $ENV:TEMP\Winutil.log -Append
@@ -19,7 +19,7 @@ Add-Type -AssemblyName System.Windows.Forms
 # variable to sync between runspaces
 $sync = [Hashtable]::Synchronized(@{})
 $sync.PSScriptRoot = $PSScriptRoot
-$sync.version = "230909_1823-Joan"
+$sync.version = "230909_1835-Joan"
 $sync.configs = @{}
 $sync.ProcessRunning = $false
 
@@ -2043,7 +2043,6 @@ $inputXML = '<Window x:Class="WinUtility.MainWindow"
         Background="{MainBackgroundColor}"
         WindowStartupLocation="CenterScreen"
         Title="Open Windows Utility" Height="670" Width="1050">
-    
     <Window.Resources>
         <Style TargetType="ComboBox">
             <Setter Property="Foreground" Value="{ComboBoxForegroundColor}"/>
@@ -2197,7 +2196,7 @@ $inputXML = '<Window x:Class="WinUtility.MainWindow"
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsChecked" Value="false">
                                 <Trigger.ExitActions>
-                                    <RemoveStoryboard BeginStoryboardName="WPFToggleSwitchLeft" />
+                                    <RemoveStoryboard BeginStoryboardName="WPFToggleSwitchLeft"/>
                                     <BeginStoryboard x:Name="WPFToggleSwitchRight">
                                         <Storyboard>
                                             <ThicknessAnimation Storyboard.TargetProperty="Margin"
@@ -2216,7 +2215,7 @@ $inputXML = '<Window x:Class="WinUtility.MainWindow"
                             </Trigger>
                             <Trigger Property="IsChecked" Value="true">
                                 <Trigger.ExitActions>
-                                    <RemoveStoryboard BeginStoryboardName="WPFToggleSwitchRight" />
+                                    <RemoveStoryboard BeginStoryboardName="WPFToggleSwitchRight"/>
                                     <BeginStoryboard x:Name="WPFToggleSwitchLeft">
                                         <Storyboard>
                                             <ThicknessAnimation Storyboard.TargetProperty="Margin"
@@ -2398,22 +2397,22 @@ $inputXML = '<Window x:Class="WinUtility.MainWindow"
                                 <CheckBox Name="WPFEssTweaksHiber" Content="Disable Hibernation" Margin="5,0" ToolTip="Hibernation is really meant for laptops as it saves what''s in memory before turning the pc off. It really should never be used, but some people are lazy and rely on it. Don''t be like Bob. Bob likes hibernation."/>
                                 <CheckBox Name="WPFEssTweaksDVR" Content="Disable GameDVR" Margin="5,0" ToolTip="GameDVR is a Windows App that is a dependency for some Store Games. I''ve never met someone that likes it, but it''s there for the XBOX crowd."/>
                                 <CheckBox Name="WPFEssTweaksServices" Content="Set Services to Manual" Margin="5,0" ToolTip="Turns a bunch of system services to manual that don''t need to be running all the time. This is pretty harmless as if the service is needed, it will simply start on demand."/>
-                                <Label Content="Dark Theme" />
+                                <Label Content="Dark Theme"/>
                                 <StackPanel Orientation="Horizontal">
                                     <Label Content="Off" />
                                     <CheckBox Name="WPFToggleDarkMode" Style="{StaticResource ToggleSwitchStyle}" Margin="2.5,0"/>
-                                    <Label Content="On" />
+                                    <Label Content="On"/>
                                 </StackPanel>
-                                <Label Content="Bing Search in Start Menu" />
+                                <Label Content="Bing Search in Start Menu"/>
                                 <StackPanel Orientation="Horizontal">
-                                    <Label Content="Off" />
+                                    <Label Content="Off"/>
                                     <CheckBox Name="WPFToggleBingSearch" Style="{StaticResource ToggleSwitchStyle}" Margin="2.5,0"/>
-                                    <Label Content="On" />
+                                    <Label Content="On"/>
                                 </StackPanel>
-							<Label Content="Performance Plans" />
+							<Label Content="Performance Plans"/>
                                 <Button Name="WPFAddUltPerf" Content="Add Ultimate Performance Profile" HorizontalAlignment = "Left" Margin="5,2" Width="300"/>
                                 <Button Name="WPFRemoveUltPerf" Content="Remove Ultimate Performance Profile" HorizontalAlignment = "Left" Margin="5,2" Width="300"/>
-							<Label Content="Shortcuts" />
+							<Label Content="Shortcuts"/>
                                 <Button Name="WPFWinUtilShortcut" Content="Create WinUtil Shortcut" HorizontalAlignment = "Left" Margin="5,0" Padding="20,5" Width="300"/>
 
                             </StackPanel>
