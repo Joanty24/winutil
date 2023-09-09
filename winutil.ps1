@@ -8,7 +8,7 @@
 <#
 .NOTES
     GitHub         : https://github.com/Joanty24/winutil
-    Version        : 230910_0117-Joan
+    Version        : 230910_0122-Joan
 #>
 
 Start-Transcript $ENV:TEMP\Winutil.log -Append
@@ -19,7 +19,7 @@ Add-Type -AssemblyName System.Windows.Forms
 # variable to sync between runspaces
 $sync = [Hashtable]::Synchronized(@{})
 $sync.PSScriptRoot = $PSScriptRoot
-$sync.version = "230910_0117-Joan"
+$sync.version = "230910_0122-Joan"
 $sync.configs = @{}
 $sync.ProcessRunning = $false
 
@@ -5234,10 +5234,10 @@ $sync.configs.tweaks = '{
   },
   "WPFMiscTweaksDisableipsix": {
     "InvokeScript": [
-      "Disable-NetAdapterBinding -ComponentID ms_tcpip6"
+      "Disable-NetAdapterBinding -Name ''*'' -ComponentID ms_tcpip6"
     ],
     "UndoScript": [
-      "Enable-NetAdapterBinding -ComponentID ms_tcpip6"
+      "Enable-NetAdapterBinding -Name ''*'' -ComponentID ms_tcpip6"
     ]
   }
 }' | convertfrom-json

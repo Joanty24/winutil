@@ -2397,10 +2397,10 @@
   },
   "WPFMiscTweaksDisableipsix": {
     "InvokeScript": [
-      "Disable-NetAdapterBinding -ComponentID ms_tcpip6"
+      "Disable-NetAdapterBinding -Name '*' -ComponentID ms_tcpip6"
     ],
     "UndoScript": [
-      "Enable-NetAdapterBinding -ComponentID ms_tcpip6"
+      "Enable-NetAdapterBinding -Name '*' -ComponentID ms_tcpip6"
     ]
   }
 }
