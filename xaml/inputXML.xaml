@@ -250,40 +250,45 @@
                                 <Button Name="WPFimportWinget" Content=" Import " Margin="7"/>
                                 <Button Name="WPFexportWinget" Content=" Export " Margin="7"/>
                             </StackPanel>
-                            <StackPanel Background="{MainBackgroundColor}" SnapsToDevicePixels="True" Grid.Row="1" Grid.Column="0" Margin="10">
+                            <StackPanel Background="{MainBackgroundColor}" Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Center" Grid.ColumnSpan="2" Margin="9">
+                                <TextBlock Padding="9">
+                                    Passa el punter per sobre dels noms per obtindre una descripcio.
+                                </TextBlock>
+                            </StackPanel>
+                            <StackPanel Background="{MainBackgroundColor}" SnapsToDevicePixels="True" Grid.Row="1" Grid.Column="0" Margin="9">
                                 <Label Content="Navegadors" FontSize="16" Margin="5,0"/>
                                 <CheckBox Name="WPFInstallfirefox" Content="Firefox" Margin="5,0" ToolTip="Navegador Mozilla Firefox"/>
                                 <CheckBox Name="WPFInstalllibrewolf" Content="Librewolf" Margin="5,0" ToolTip="Navegador basat en Firefox amb bloquejador d'anuncis centrat en la privacitat"/>
-                                <CheckBox Name="WPFInstallchromium" Content="ungoogled-chromium" Margin="5,0" ToolTip="Versió lliure i sense Google de Google Chrome"/>
+                                <CheckBox Name="WPFInstallchromium" Content="ungoogled-chromium" Margin="5,0" ToolTip="Versio lliure i sense Google de Google Chrome"/>
                                 <CheckBox Name="WPFInstallbrave" Content="Brave" Margin="5,0" ToolTip="Navegador basat en Chromium amb bloquejador d'anuncis"/>
                                 <Label Content="Oficina" FontSize="16" Margin="5,0"/>
-                                <CheckBox Name="WPFInstallonlyoffice" Content="ONLYOFFICE Desktop" Margin="5,0" ToolTip="Conjunt d'ofimàtica compatible amb Microsoft Office"/>
-                                <CheckBox Name="WPFInstalllibreoffice" Content="LibreOffice" Margin="5,0" ToolTip="Conjunt d'ofimàtica lliure"/>
+                                <CheckBox Name="WPFInstallonlyoffice" Content="ONLYOFFICE Desktop" Margin="5,0" ToolTip="Conjunt d'ofimatica compatible amb Microsoft Office"/>
+                                <CheckBox Name="WPFInstalllibreoffice" Content="LibreOffice" Margin="5,0" ToolTip="Conjunt d'ofimatica lliure"/>
                                 <CheckBox Name="WPFInstallwinmerge" Content="WinMerge" Margin="5,0" ToolTip="Comparador de fitxers de text"/>
                                 <CheckBox Name="WPFInstallscribus" Content="Scribus" Margin="5,0" ToolTip="Programa editorial"/>
                                 <CheckBox Name="WPFInstallsumatra" Content="Sumatra PDF" Margin="5,0" ToolTip="Visualitzador PDF"/>
                                 <CheckBox Name="WPFInstalljoplin" Content="Joplin" Margin="5,0" ToolTip="Notes"/>
                             </StackPanel>
-                            <StackPanel Background="{MainBackgroundColor}" SnapsToDevicePixels="True" Grid.Row="1" Grid.Column="1" Margin="10">
-                                <Label Content="Multimèdia" FontSize="16" Margin="5,0"/>
-                                <CheckBox Name="WPFInstallvlc" Content="VLC" Margin="5,0" ToolTip="Reproductor multimèdia"/>
+                            <StackPanel Background="{MainBackgroundColor}" SnapsToDevicePixels="True" Grid.Row="1" Grid.Column="1" Margin="9">
+                                <Label Content="Multimedia" FontSize="16" Margin="5,0"/>
+                                <CheckBox Name="WPFInstallvlc" Content="VLC" Margin="5,0" ToolTip="Reproductor multimedia"/>
                                 <CheckBox Name="WPFInstallobs" Content="OBS Studio" Margin="5,0" ToolTip="Capturador de pantalla"/>
                                 <CheckBox Name="WPFInstallspotube" Content="Spotube" Margin="5,0" ToolTip="Reproductor per Spotify"/>
                                 <CheckBox Name="WPFInstallcider" Content="Cider" Margin="5,0" ToolTip="Reproductor per Apple Music"/>
                                 <CheckBox Name="WPFInstalldownloader" Content="Xtreme Download Manager" Margin="5,0" ToolTip="Baixador de fitxers d'internet"/>
-                                <CheckBox Name="WPFInstallaudacity" Content="Audacity" Margin="5,0" ToolTip="Editor d'àudio"/>
+                                <CheckBox Name="WPFInstallaudacity" Content="Audacity" Margin="5,0" ToolTip="Editor d'audio"/>
                                 <CheckBox Name="WPFInstallgimp" Content="GIMP" Margin="5,0" ToolTip="Editor d'imatges"/>
                                 <CheckBox Name="WPFInstallkrita" Content="Krita" Margin="5,0" ToolTip="Editor d'imatges"/>
                                 <CheckBox Name="WPFInstalldarktable" Content="Darktable" Margin="5,0" ToolTip="Editor de fotografies"/>
                                 <CheckBox Name="WPFInstallinkscape" Content="Inkscape" Margin="5,0" ToolTip="Editor vectorial"/>
                                 <CheckBox Name="WPFInstallcaesium" Content="Caesium" Margin="5,0" ToolTip="Compressor d'imatges"/>
-                                <CheckBox Name="WPFInstallkdenlive" Content="Kdenlive" Margin="5,0" ToolTip="Editor de vídeo"/>
-                                <CheckBox Name="WPFInstallhandbrake" Content="Handbrake" Margin="5,0" ToolTip="Codificador de vídeo"/>
-                                <CheckBox Name="WPFInstallblender" Content="Blender" Margin="5,0" ToolTip="Creador multimèdia"/>
+                                <CheckBox Name="WPFInstallkdenlive" Content="Kdenlive" Margin="5,0" ToolTip="Editor de video"/>
+                                <CheckBox Name="WPFInstallhandbrake" Content="Handbrake" Margin="5,0" ToolTip="Codificador de video"/>
+                                <CheckBox Name="WPFInstallblender" Content="Blender" Margin="5,0" ToolTip="Creador multimedia"/>
                                 <CheckBox Name="WPFInstallfreecad" Content="FreeCAD" Margin="5,0" ToolTip="CAD lliure"/>
                             </StackPanel>
-                            <StackPanel Background="{MainBackgroundColor}" SnapsToDevicePixels="True" Grid.Row="1" Grid.Column="2" Margin="10">
-                                <Label Content="Programació" FontSize="16" Margin="5,0"/>
+                            <StackPanel Background="{MainBackgroundColor}" SnapsToDevicePixels="True" Grid.Row="1" Grid.Column="2" Margin="9">
+                                <Label Content="Programacio" FontSize="16" Margin="5,0"/>
                                 <CheckBox Name="WPFInstallcodium" Content="VSCodium" Margin="5,0" ToolTip="Editor de codi complet"/>
                                 <CheckBox Name="WPFInstallnotepad" Content="Notepad++" Margin="5,0" ToolTip="Editor de codi simple"/>
                                 <Label Content="Jocs" FontSize="16" Margin="5,0"/>
@@ -296,10 +301,10 @@
                                 <CheckBox Name="WPFInstallchecksum" Content="RHash" Margin="5,0" ToolTip="Comprovador de hash"/>
                                 <CheckBox Name="WPFInstallkeepass" Content="KeePassXC" Margin="5,0" ToolTip="desador de contrassenyes"/>
                                 <CheckBox Name="WPFInstallsandbox" Content="Sandbobie Plus" Margin="5,0" ToolTip="Permet executar programes de manera segura"/>
-                                <CheckBox Name="WPFInstallportmaster" Content="Portmaster" Margin="5,0" ToolTip="Gestor de trànsit d'internet"/>
-                                <CheckBox Name="WPFInstallwireshark" Content="Wireshark" Margin="5,0" ToolTip="Visualitzador del trànsit d'internet"/>
+                                <CheckBox Name="WPFInstallportmaster" Content="Portmaster" Margin="5,0" ToolTip="Gestor de transit d'internet"/>
+                                <CheckBox Name="WPFInstallwireshark" Content="Wireshark" Margin="5,0" ToolTip="Visualitzador del transit d'internet"/>
                             </StackPanel>
-                            <StackPanel Background="{MainBackgroundColor}" SnapsToDevicePixels="True" Grid.Row="1" Grid.Column="3" Margin="10">
+                            <StackPanel Background="{MainBackgroundColor}" SnapsToDevicePixels="True" Grid.Row="1" Grid.Column="3" Margin="9">
                                 <Label Content="Utilitats" FontSize="16" Margin="5,0"/>
                                 <CheckBox Name="WPFInstallzip" Content="7-Zip" Margin="5,0" ToolTip="Descompressor d'arxius"/>
                                 <CheckBox Name="WPFInstallpeazip" Content="PeaZip" Margin="5,0"  ToolTip="Descompressor d'arxius"/>
@@ -310,11 +315,6 @@
                                 <CheckBox Name="WPFInstallrufus" Content="Rufus" Margin="5,0" ToolTip="Bootable USB"/>
                                 <CheckBox Name="WPFInstallrustdesk" Content="RustDesk" Margin="5,0" ToolTip="Escriptori remot"/>
                                 <CheckBox Name="WPFInstallautohotkey" Content="AutoHotKey" Margin="5,0" ToolTip="Scrips de teclat"/>
-                            </StackPanel>
-                            <StackPanel Background="{MainBackgroundColor}" Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Center" Grid.ColumnSpan="2" Margin="10">
-                                <TextBlock Padding="10">
-                                    Passa el punter per sobre dels noms per obtindre una descripció.
-                                </TextBlock>
                             </StackPanel>
                         </Grid>
                     </TabItem>
@@ -329,7 +329,7 @@
                                 <RowDefinition Height=".70*"/>
                                 <RowDefinition Height=".10*"/>
                             </Grid.RowDefinitions>
-                            <StackPanel Background="{MainBackgroundColor}" Orientation="Horizontal" Grid.Row="0" HorizontalAlignment="Center" Grid.Column="0" Margin="10">
+                            <StackPanel Background="{MainBackgroundColor}" Orientation="Horizontal" Grid.Row="0" HorizontalAlignment="Center" Grid.Column="0" Margin="9">
                                 <Label Content="Recommended Selections:" FontSize="17" VerticalAlignment="Center"/>
                                 <Button Name="WPFdesktop" Content=" Desktop " Margin="7"/>
                                 <Button Name="WPFlaptop" Content=" Laptop " Margin="7"/>
@@ -337,16 +337,16 @@
                                 <Button Name="WPFclear" Content=" Clear " Margin="7"/>
                                 <Button Name="WPFGetInstalledTweaks" Content=" Get Installed " Margin="7"/>
                             </StackPanel>
-                            <StackPanel Background="{MainBackgroundColor}" Orientation="Horizontal" Grid.Row="0" HorizontalAlignment="Center" Grid.Column="1" Margin="10">
+                            <StackPanel Background="{MainBackgroundColor}" Orientation="Horizontal" Grid.Row="0" HorizontalAlignment="Center" Grid.Column="1" Margin="9">
                                 <Label Content="Configuration File:" FontSize="17" VerticalAlignment="Center"/>
                                 <Button Name="WPFimport" Content=" Import " Margin="7"/>
                                 <Button Name="WPFexport" Content=" Export " Margin="7"/>
                             </StackPanel>
-                            <StackPanel Background="{MainBackgroundColor}" Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Center" Grid.ColumnSpan="2" Margin="10">
-                                <TextBlock Padding="10">
-                                    Passa el punter per sobre dels noms per obtindre una descripció.
+                            <StackPanel Background="{MainBackgroundColor}" Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Center" Grid.ColumnSpan="2" Margin="9">
+                                <TextBlock Padding="9">
+                                    Passa el punter per sobre dels noms per obtindre una descripcio.
                                     <LineBreak/>
-                                    Els valors predefinits són per usuaris normals. És important anar amb compte per no trencar el sistema!
+                                    Els valors predefinits son per usuaris normals. es important anar amb compte per no trencar el sistema!
                                 </TextBlock>
                             </StackPanel>
                             <StackPanel Background="{MainBackgroundColor}" SnapsToDevicePixels="True" Grid.Row="1" Grid.Column="0" Margin="10,5">
@@ -458,17 +458,17 @@
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
                             <StackPanel Background="{MainBackgroundColor}" SnapsToDevicePixels="True" Grid.Column="0" Margin="10,5">
-                                <Button Name="WPFUpdatesdefault" FontSize="16" Content="Default (Out of Box) Settings" Margin="20,4,20,10" Padding="10"/>
-                                <TextBlock Margin="20,0,20,0" Padding="10" TextWrapping="WrapWithOverflow" MaxWidth="300">This is the default settings that come with Windows. <LineBreak/><LineBreak/> No modifications are made and will remove any custom windows update settings.<LineBreak/><LineBreak/>Note: If you still encounter update errors, reset all updates in the config tab. That will restore ALL Microsoft Update Services from their servers and reinstall them to default settings.</TextBlock>
+                                <Button Name="WPFUpdatesdefault" FontSize="16" Content="Default (Out of Box) Settings" Margin="20,4,20,10" Padding="9"/>
+                                <TextBlock Margin="20,0,20,0" Padding="9" TextWrapping="WrapWithOverflow" MaxWidth="300">This is the default settings that come with Windows. <LineBreak/><LineBreak/> No modifications are made and will remove any custom windows update settings.<LineBreak/><LineBreak/>Note: If you still encounter update errors, reset all updates in the config tab. That will restore ALL Microsoft Update Services from their servers and reinstall them to default settings.</TextBlock>
                             </StackPanel>
                             <StackPanel Background="{MainBackgroundColor}" SnapsToDevicePixels="True" Grid.Column="1" Margin="10,5">
-                                <Button Name="WPFUpdatessecurity" FontSize="16" Content="Security (Recommended) Settings" Margin="20,4,20,10" Padding="10"/>
-                                <TextBlock Margin="20,0,20,0" Padding="10" TextWrapping="WrapWithOverflow" MaxWidth="300">This is my recommended setting I use on all computers.<LineBreak/><LineBreak/> It will delay feature updates by 2 years and will install security updates 4 days after release.<LineBreak/><LineBreak/>Feature Updates: Adds features and often bugs to systems when they are released. You want to delay these as long as possible.<LineBreak/><LineBreak/>Security Updates: Typically these are pressing security flaws that need to be patched quickly. You only want to delay these a couple of days just to see if they are safe and don't break other systems. You don't want to go without these for ANY extended periods of time.</TextBlock>
+                                <Button Name="WPFUpdatessecurity" FontSize="16" Content="Security (Recommended) Settings" Margin="20,4,20,10" Padding="9"/>
+                                <TextBlock Margin="20,0,20,0" Padding="9" TextWrapping="WrapWithOverflow" MaxWidth="300">This is my recommended setting I use on all computers.<LineBreak/><LineBreak/> It will delay feature updates by 2 years and will install security updates 4 days after release.<LineBreak/><LineBreak/>Feature Updates: Adds features and often bugs to systems when they are released. You want to delay these as long as possible.<LineBreak/><LineBreak/>Security Updates: Typically these are pressing security flaws that need to be patched quickly. You only want to delay these a couple of days just to see if they are safe and don't break other systems. You don't want to go without these for ANY extended periods of time.</TextBlock>
                             </StackPanel>
                             <StackPanel Background="{MainBackgroundColor}" SnapsToDevicePixels="True" Grid.Column="2" Margin="10,5">
                                 <Button Name="WPFUpdatesdisable" FontSize="16" Content="Disable ALL Updates (NOT RECOMMENDED!)" Margin="20,4,20,10" Padding="10,10,10,10"/>
-                                <TextBlock Margin="20,0,20,0" Padding="10" TextWrapping="WrapWithOverflow" MaxWidth="300">This completely disables ALL Windows Updates and is NOT RECOMMENDED.<LineBreak/><LineBreak/> However, it can be suitable if you use your system for a select purpose and do not actively browse the internet. <LineBreak/><LineBreak/>Note: Your system will be easier to hack and infect without security updates.</TextBlock>
-                                <TextBlock Text=" " Margin="20,0,20,0" Padding="10" TextWrapping="WrapWithOverflow" MaxWidth="300"/>
+                                <TextBlock Margin="20,0,20,0" Padding="9" TextWrapping="WrapWithOverflow" MaxWidth="300">This completely disables ALL Windows Updates and is NOT RECOMMENDED.<LineBreak/><LineBreak/> However, it can be suitable if you use your system for a select purpose and do not actively browse the internet. <LineBreak/><LineBreak/>Note: Your system will be easier to hack and infect without security updates.</TextBlock>
+                                <TextBlock Text=" " Margin="20,0,20,0" Padding="9" TextWrapping="WrapWithOverflow" MaxWidth="300"/>
 
                             </StackPanel>
 

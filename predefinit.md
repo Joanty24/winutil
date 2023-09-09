@@ -1,7 +1,7 @@
 # Predeterminats
 ## Aplicacions
-### La meva sel·lecció personal
+### La meva sel·leccio personal
 ## Tweaks
 ### Torre
-### Portàtil
-### Bàsic
+### Portatil
+### Basic

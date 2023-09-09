@@ -13,7 +13,7 @@ Scribus
 Sumatra PDF  
 Joplin  
 
-## Multimèdia
+## Multimedia
 VLC  
 OBS Studio  
 Spotube  
@@ -28,10 +28,10 @@ Krita
 Darktable  
 Inkscape  
 Caesium  
-#### Vídeo
+#### Video
 Kdenlive  
 Handbrake  
-#### Més
+#### Mes
 Blender  
 FreeCAD  
 
