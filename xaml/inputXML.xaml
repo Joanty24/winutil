@@ -312,6 +312,11 @@
                                 <CheckBox Name="WPFInstallrustdesk" Content="RustDesk" Margin="5,0" ToolTip="Escriptori remot"/>
                                 <CheckBox Name="WPFInstallautohotkey" Content="AutoHotKey" Margin="5,0" ToolTip="Scrips de teclat"/>
                             </StackPanel>
+                            <StackPanel Background="{MainBackgroundColor}" Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Center" Grid.ColumnSpan="1" Margin="10">
+                                <TextBlock Padding="10">
+                                    Passa el punter per sobre dels noms per obtindre una descripció.
+                                </TextBlock>
+                            </StackPanel>
                         </Grid>
                     </TabItem>
                     <TabItem Header="Tweaks" Visibility="Collapsed" Name="WPFTab2">
@@ -340,8 +345,9 @@
                             </StackPanel>
                             <StackPanel Background="{MainBackgroundColor}" Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Center" Grid.ColumnSpan="2" Margin="10">
                                 <TextBlock Padding="10">
-                                    Note: Hover over items to get a better description. Please be careful as many of these tweaks will heavily modify your system.
-                                    <LineBreak/>Recommended selections are for normal users and if you are unsure do NOT check anything else!
+                                    Passa el punter per sobre dels noms per obtindre una descripció.
+                                    <LineBreak/>
+                                    Els valors predefinits són per usuaris normals. És important anar amb compte per no trencar el sistema!
                                 </TextBlock>
                             </StackPanel>
                             <StackPanel Background="{MainBackgroundColor}" SnapsToDevicePixels="True" Grid.Row="1" Grid.Column="0" Margin="10,5">

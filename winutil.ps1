@@ -8,7 +8,7 @@
 <#
 .NOTES
     GitHub         : https://github.com/Joanty24/winutil
-    Version        : 230908_1415-Joan
+    Version        : 230909_1823-Joan
 #>
 
 Start-Transcript $ENV:TEMP\Winutil.log -Append
@@ -19,7 +19,7 @@ Add-Type -AssemblyName System.Windows.Forms
 # variable to sync between runspaces
 $sync = [Hashtable]::Synchronized(@{})
 $sync.PSScriptRoot = $PSScriptRoot
-$sync.version = "230908_1415-Joan"
+$sync.version = "230909_1823-Joan"
 $sync.configs = @{}
 $sync.ProcessRunning = $false
 
@@ -2288,64 +2288,69 @@ $inputXML = '<Window x:Class="WinUtility.MainWindow"
                             </StackPanel>
                             <StackPanel Background="{MainBackgroundColor}" SnapsToDevicePixels="True" Grid.Row="1" Grid.Column="0" Margin="10">
                                 <Label Content="Navegadors" FontSize="16" Margin="5,0"/>
-                                <CheckBox Name="WPFInstallfirefox" Content="Firefox" Margin="5,0"/>
-                                <CheckBox Name="WPFInstalllibrewolf" Content="Librewolf" Margin="5,0"/>
-                                <CheckBox Name="WPFInstallchromium" Content="ungoogled-chromium" Margin="5,0"/>
-                                <CheckBox Name="WPFInstallbrave" Content="Brave" Margin="5,0"/>
+                                <CheckBox Name="WPFInstallfirefox" Content="Firefox" Margin="5,0" ToolTip="Navegador Mozilla Firefox"/>
+                                <CheckBox Name="WPFInstalllibrewolf" Content="Librewolf" Margin="5,0" ToolTip="Navegador basat en Firefox amb bloquejador d''anuncis centrat en la privacitat"/>
+                                <CheckBox Name="WPFInstallchromium" Content="ungoogled-chromium" Margin="5,0" ToolTip="Versi? lliure i sense Google de Google Chrome"/>
+                                <CheckBox Name="WPFInstallbrave" Content="Brave" Margin="5,0" ToolTip="Navegador basat en Chromium amb bloquejador d''anuncis"/>
                                 <Label Content="Oficina" FontSize="16" Margin="5,0"/>
-                                <CheckBox Name="WPFInstallonlyoffice" Content="ONLYOFFICE Desktop" Margin="5,0"/>
-                                <CheckBox Name="WPFInstalllibreoffice" Content="LibreOffice" Margin="5,0"/>
-                                <CheckBox Name="WPFInstallwinmerge" Content="WinMerge" Margin="5,0"/>
-                                <CheckBox Name="WPFInstallscribus" Content="Scribus" Margin="5,0"/>
-                                <CheckBox Name="WPFInstallsumatra" Content="Sumatra PDF" Margin="5,0"/>
-                                <CheckBox Name="WPFInstalljoplin" Content="Joplin" Margin="5,0"/>
+                                <CheckBox Name="WPFInstallonlyoffice" Content="ONLYOFFICE Desktop" Margin="5,0" ToolTip="Conjunt d''ofim?tica compatible amb Microsoft Office"/>
+                                <CheckBox Name="WPFInstalllibreoffice" Content="LibreOffice" Margin="5,0" ToolTip="Conjunt d''ofim?tica lliure"/>
+                                <CheckBox Name="WPFInstallwinmerge" Content="WinMerge" Margin="5,0" ToolTip="Comparador de fitxers de text"/>
+                                <CheckBox Name="WPFInstallscribus" Content="Scribus" Margin="5,0" ToolTip="Programa editorial"/>
+                                <CheckBox Name="WPFInstallsumatra" Content="Sumatra PDF" Margin="5,0" ToolTip="Visualitzador PDF"/>
+                                <CheckBox Name="WPFInstalljoplin" Content="Joplin" Margin="5,0" ToolTip="Notes"/>
                             </StackPanel>
                             <StackPanel Background="{MainBackgroundColor}" SnapsToDevicePixels="True" Grid.Row="1" Grid.Column="1" Margin="10">
                                 <Label Content="Multim?dia" FontSize="16" Margin="5,0"/>
-                                <CheckBox Name="WPFInstallvlc" Content="VLC" Margin="5,0"/>
-                                <CheckBox Name="WPFInstallobs" Content="OBS Studio" Margin="5,0"/>
-                                <CheckBox Name="WPFInstallspotube" Content="Spotube" Margin="5,0"/>
-                                <CheckBox Name="WPFInstallcider" Content="Cider" Margin="5,0"/>
-                                <CheckBox Name="WPFInstalldownloader" Content="Xtreme Download Manager" Margin="5,0"/>
-                                <CheckBox Name="WPFInstallaudacity" Content="Audacity" Margin="5,0"/>
-                                <CheckBox Name="WPFInstallgimp" Content="GIMP" Margin="5,0"/>
-                                <CheckBox Name="WPFInstallkrita" Content="Krita" Margin="5,0"/>
-                                <CheckBox Name="WPFInstalldarktable" Content="Darktable" Margin="5,0"/>
-                                <CheckBox Name="WPFInstallinkscape" Content="Inkscape" Margin="5,0"/>
-                                <CheckBox Name="WPFInstallcaesium" Content="Caesium" Margin="5,0"/>
-                                <CheckBox Name="WPFInstallkdenlive" Content="Kdenlive" Margin="5,0"/>
-                                <CheckBox Name="WPFInstallhandbrake" Content="Handbrake" Margin="5,0"/>
-                                <CheckBox Name="WPFInstallblender" Content="Blender" Margin="5,0"/>
-                                <CheckBox Name="WPFInstallfreecad" Content="FreeCAD" Margin="5,0"/>
+                                <CheckBox Name="WPFInstallvlc" Content="VLC" Margin="5,0" ToolTip="Reproductor multim?dia"/>
+                                <CheckBox Name="WPFInstallobs" Content="OBS Studio" Margin="5,0" ToolTip="Capturador de pantalla"/>
+                                <CheckBox Name="WPFInstallspotube" Content="Spotube" Margin="5,0" ToolTip="Reproductor per Spotify"/>
+                                <CheckBox Name="WPFInstallcider" Content="Cider" Margin="5,0" ToolTip="Reproductor per Apple Music"/>
+                                <CheckBox Name="WPFInstalldownloader" Content="Xtreme Download Manager" Margin="5,0" ToolTip="Baixador de fitxers d''internet"/>
+                                <CheckBox Name="WPFInstallaudacity" Content="Audacity" Margin="5,0" ToolTip="Editor d''?udio"/>
+                                <CheckBox Name="WPFInstallgimp" Content="GIMP" Margin="5,0" ToolTip="Editor d''imatges"/>
+                                <CheckBox Name="WPFInstallkrita" Content="Krita" Margin="5,0" ToolTip="Editor d''imatges"/>
+                                <CheckBox Name="WPFInstalldarktable" Content="Darktable" Margin="5,0" ToolTip="Editor de fotografies"/>
+                                <CheckBox Name="WPFInstallinkscape" Content="Inkscape" Margin="5,0" ToolTip="Editor vectorial"/>
+                                <CheckBox Name="WPFInstallcaesium" Content="Caesium" Margin="5,0" ToolTip="Compressor d''imatges"/>
+                                <CheckBox Name="WPFInstallkdenlive" Content="Kdenlive" Margin="5,0" ToolTip="Editor de v?deo"/>
+                                <CheckBox Name="WPFInstallhandbrake" Content="Handbrake" Margin="5,0" ToolTip="Codificador de v?deo"/>
+                                <CheckBox Name="WPFInstallblender" Content="Blender" Margin="5,0"/ ToolTip="Creador multim?dia">
+                                <CheckBox Name="WPFInstallfreecad" Content="FreeCAD" Margin="5,0"/ ToolTip="CAD lliure">
                             </StackPanel>
                             <StackPanel Background="{MainBackgroundColor}" SnapsToDevicePixels="True" Grid.Row="1" Grid.Column="2" Margin="10">
                                 <Label Content="Programaci?" FontSize="16" Margin="5,0"/>
-                                <CheckBox Name="WPFInstallcodium" Content="VSCodium" Margin="5,0"/>
-                                <CheckBox Name="WPFInstallnotepad" Content="Notepad++" Margin="5,0"/>
+                                <CheckBox Name="WPFInstallcodium" Content="VSCodium" Margin="5,0" ToolTip="Editor de codi complet"/>
+                                <CheckBox Name="WPFInstallnotepad" Content="Notepad++" Margin="5,0" ToolTip="Editor de codi simple"/>
                                 <Label Content="Jocs" FontSize="16" Margin="5,0"/>
-                                <CheckBox Name="WPFInstallplaynite" Content="Playnite" Margin="5,0"/>
-                                <CheckBox Name="WPFInstallheroic" Content="Heroic Games Launcher" Margin="5,0"/>
-                                <CheckBox Name="WPFInstallitchio" Content="itch.io" Margin="5,0"/>
+                                <CheckBox Name="WPFInstallplaynite" Content="Playnite" Margin="5,0" ToolTip="Llan?ador de jocs"/>
+                                <CheckBox Name="WPFInstallheroic" Content="Heroic Games Launcher" Margin="5,0" ToolTip="Llan?ador de jocs"/>
+                                <CheckBox Name="WPFInstallitchio" Content="itch.io" Margin="5,0" ToolTip="Llan?ador de jocs"/>
                                 <Label Content="Seguretat" FontSize="16" Margin="5,0"/>
-                                <CheckBox Name="WPFInstallclamwin" Content="ClamWin" Margin="5,0"/>
-                                <CheckBox Name="WPFInstalleraser" Content="Eraser Classic" Margin="5,0"/>
-                                <CheckBox Name="WPFInstallchecksum" Content="RHash" Margin="5,0"/>
-                                <CheckBox Name="WPFInstallkeepass" Content="KeePassXC" Margin="5,0"/>
-                                <CheckBox Name="WPFInstallsandbox" Content="Sandbobie Plus" Margin="5,0"/>
-                                <CheckBox Name="WPFInstallportmaster" Content="Portmaster" Margin="5,0"/>
-                                <CheckBox Name="WPFInstallwireshark" Content="Wireshark" Margin="5,0"/>
+                                <CheckBox Name="WPFInstallclamwin" Content="ClamWin" Margin="5,0" ToolTip="Antivirus"/>
+                                <CheckBox Name="WPFInstalleraser" Content="Eraser Classic" Margin="5,0" ToolTip="Elimina fitxers sense deixar rastre"/>
+                                <CheckBox Name="WPFInstallchecksum" Content="RHash" Margin="5,0" ToolTip="Comprovador de hash"/>
+                                <CheckBox Name="WPFInstallkeepass" Content="KeePassXC" Margin="5,0" ToolTip="desador de contrassenyes"/>
+                                <CheckBox Name="WPFInstallsandbox" Content="Sandbobie Plus" Margin="5,0" ToolTip="Permet executar programes de manera segura"/>
+                                <CheckBox Name="WPFInstallportmaster" Content="Portmaster" Margin="5,0" ToolTip="Gestor de tr?nsit d''internet"/>
+                                <CheckBox Name="WPFInstallwireshark" Content="Wireshark" Margin="5,0" ToolTip="Visualitzador del tr?nsit d''internet"/>
                             </StackPanel>
                             <StackPanel Background="{MainBackgroundColor}" SnapsToDevicePixels="True" Grid.Row="1" Grid.Column="3" Margin="10">
                                 <Label Content="Utilitats" FontSize="16" Margin="5,0"/>
-                                <CheckBox Name="WPFInstallzip" Content="7-Zip" Margin="5,0"/>
-                                <CheckBox Name="WPFInstallpeazip" Content="PeaZip" Margin="5,0"/>
-                                <CheckBox Name="WPFInstallbleachbit" Content="BleachBit" Margin="5,0"/>
-                                <CheckBox Name="WPFInstallexplorer" Content="Double Commander" Margin="5,0"/>
-                                <CheckBox Name="WPFInstallwindir" Content="WinDirStat" Margin="5,0"/>
-                                <CheckBox Name="WPFInstallbulkcrap" Content="Bulk Crap Uninstaller" Margin="5,0"/>
-                                <CheckBox Name="WPFInstallrufus" Content="Rufus" Margin="5,0"/>
-                                <CheckBox Name="WPFInstallrustdesk" Content="RustDesk" Margin="5,0"/>
-                                <CheckBox Name="WPFInstallautohotkey" Content="AutoHotKey" Margin="5,0"/>
+                                <CheckBox Name="WPFInstallzip" Content="7-Zip" Margin="5,0" ToolTip="Descompressor d''arxius"/>
+                                <CheckBox Name="WPFInstallpeazip" Content="PeaZip" Margin="5,0"  ToolTip="Descompressor d''arxius"/>
+                                <CheckBox Name="WPFInstallbleachbit" Content="BleachBit" Margin="5,0" ToolTip="Netejador de disc"/>
+                                <CheckBox Name="WPFInstallexplorer" Content="Double Commander" Margin="5,0" ToolTip="Explorador de fitxers"/>
+                                <CheckBox Name="WPFInstallwindir" Content="WinDirStat" Margin="5,0" ToolTip="Gestor d''emmagatzematge"/>
+                                <CheckBox Name="WPFInstallbulkcrap" Content="Bulk Crap Uninstaller" Margin="5,0" ToolTip="Desinstal?lador de programes"/>
+                                <CheckBox Name="WPFInstallrufus" Content="Rufus" Margin="5,0" ToolTip="Bootable USB"/>
+                                <CheckBox Name="WPFInstallrustdesk" Content="RustDesk" Margin="5,0" ToolTip="Escriptori remot"/>
+                                <CheckBox Name="WPFInstallautohotkey" Content="AutoHotKey" Margin="5,0" ToolTip="Scrips de teclat"/>
+                            </StackPanel>
+                            <StackPanel Background="{MainBackgroundColor}" Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Center" Grid.ColumnSpan="1" Margin="10">
+                                <TextBlock Padding="10">
+                                    Passa el punter per sobre dels noms per obtindre una descripci?.
+                                </TextBlock>
                             </StackPanel>
                         </Grid>
                     </TabItem>
@@ -2375,8 +2380,9 @@ $inputXML = '<Window x:Class="WinUtility.MainWindow"
                             </StackPanel>
                             <StackPanel Background="{MainBackgroundColor}" Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Center" Grid.ColumnSpan="2" Margin="10">
                                 <TextBlock Padding="10">
-                                    Note: Hover over items to get a better description. Please be careful as many of these tweaks will heavily modify your system.
-                                    <LineBreak/>Recommended selections are for normal users and if you are unsure do NOT check anything else!
+                                    Passa el punter per sobre dels noms per obtindre una descripci?.
+                                    <LineBreak/>
+                                    Els valors predefinits s?n per usuaris normals. ?s important anar amb compte per no trencar el sistema!
                                 </TextBlock>
                             </StackPanel>
                             <StackPanel Background="{MainBackgroundColor}" SnapsToDevicePixels="True" Grid.Row="1" Grid.Column="0" Margin="10,5">
