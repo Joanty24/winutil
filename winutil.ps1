@@ -8,7 +8,7 @@
 <#
 .NOTES
     GitHub         : https://github.com/Joanty24/winutil
-    Version        : 230909_2354-Joan
+    Version        : 230909_2359-Joan
 #>
 
 Start-Transcript $ENV:TEMP\Winutil.log -Append
@@ -19,7 +19,7 @@ Add-Type -AssemblyName System.Windows.Forms
 # variable to sync between runspaces
 $sync = [Hashtable]::Synchronized(@{})
 $sync.PSScriptRoot = $PSScriptRoot
-$sync.version = "230909_2354-Joan"
+$sync.version = "230909_2359-Joan"
 $sync.configs = @{}
 $sync.ProcessRunning = $false
 
@@ -210,19 +210,19 @@ function Get-WinUtilVariables {
     return $keys
 }
 function Install-WinUtilChoco {
-    try{
-        Write-Host "Checking if Chocolatey is Installed..."
-        if((Test-WinUtilPackageManager -choco)){
-            Write-Host "Chocolatey Already Installed"
-            return
-        }
-        #Write-Host "Seems Chocolatey is not installed, installing now"
-        #Set-ExecutionPolicy Bypass -Scope Process -Force; Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1')) -ErrorAction Stop
-        #powershell choco feature enable -n allowGlobalConfirmation
-    }
-    Catch{
-        throw [ChocoFailedInstall]::new('Failed to install Chocolatey')
-    }
+#    try{
+#        Write-Host "Checking if Chocolatey is Installed..."
+#        if((Test-WinUtilPackageManager -choco)){
+#            Write-Host "Chocolatey Already Installed"
+#            return
+#        }
+#        Write-Host "Seems Chocolatey is not installed, installing now"
+#        Set-ExecutionPolicy Bypass -Scope Process -Force; Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1')) -ErrorAction Stop
+#        powershell choco feature enable -n allowGlobalConfirmation
+#    }
+#    Catch{
+#        throw [ChocoFailedInstall]::new('Failed to install Chocolatey')
+#    }
 }
 Function Install-WinUtilProgramWinget {
 
@@ -2355,7 +2355,7 @@ $inputXML = '<Window x:Class="WinUtility.MainWindow"
                                 <CheckBox Name="WPFInstallrustdesk" Content="RustDesk" Margin="5,0" ToolTip="Escriptori remot"/>
                                 <CheckBox Name="WPFInstallautohotkey" Content="AutoHotKey" Margin="5,0" ToolTip="Scrips de teclat"/>
                             </StackPanel>
-                            <StackPanel Background="{MainBackgroundColor}" Orientation="Horizontal" Grid.Row="0" HorizontalAlignment="Center" Grid.Column="3" Grid.ColumnSpan="1" Margin="8">
+                            <StackPanel Background="{MainBackgroundColor}" Orientation="Horizontal" Grid.Row="0" HorizontalAlignment="Center" Grid.Column="2" Grid.ColumnSpan="2" Margin="8">
                                 <TextBlock Padding="5">
                                     Passa el punter per sobre dels noms per obtindre una descripcio.
                                 </TextBlock>
