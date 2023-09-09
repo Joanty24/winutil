@@ -8,7 +8,7 @@
 <#
 .NOTES
     GitHub         : https://github.com/Joanty24/winutil
-    Version        : 230910_0122-Joan
+    Version        : 230910_0128-Joan
 #>
 
 Start-Transcript $ENV:TEMP\Winutil.log -Append
@@ -19,7 +19,7 @@ Add-Type -AssemblyName System.Windows.Forms
 # variable to sync between runspaces
 $sync = [Hashtable]::Synchronized(@{})
 $sync.PSScriptRoot = $PSScriptRoot
-$sync.version = "230910_0122-Joan"
+$sync.version = "230910_0128-Joan"
 $sync.configs = @{}
 $sync.ProcessRunning = $false
 
@@ -2444,6 +2444,7 @@ $inputXML = '<Window x:Class="WinUtility.MainWindow"
                                 <CheckBox Name="WPFMiscTweaksEnableMouseAcceleration" Content="Enable Mouse Acceleration" Margin="5,0" ToolTip="Enables Mouse Acceleration."/>
                                 <CheckBox Name="WPFMiscTweaksEnableVerboselogon" Content="Enable Verbose logon messages" Margin="5,0" ToolTip="Enables verbose logon messages."/>
                                 <CheckBox Name="WPFMiscTweaksDisableipsix" Content="Disable IPv6" Margin="5,0" ToolTip="Disables IPv6."/>
+                                <CheckBox Name="WPFMiscTweaksEnableipsix" Content="Enable IPv6" Margin="5,0" ToolTip="Enables IPv6."/>
                                 <Label Content="DNS"/>
 							    <ComboBox Name="WPFchangedns"  Height = "20" Width = "160" HorizontalAlignment = "Left" Margin="5,5"> 
 								    <ComboBoxItem IsSelected="True" Content = "Default"/> 
@@ -5238,6 +5239,14 @@ $sync.configs.tweaks = '{
     ],
     "UndoScript": [
       "Enable-NetAdapterBinding -Name ''*'' -ComponentID ms_tcpip6"
+    ]
+  },
+  "WPFMiscTweaksEnableipsix": {
+    "InvokeScript": [
+      "Enable-NetAdapterBinding -Name ''*'' -ComponentID ms_tcpip6"
+    ],
+    "UndoScript": [
+      "Disable-NetAdapterBinding -Name ''*'' -ComponentID ms_tcpip6"
     ]
   }
 }' | convertfrom-json
