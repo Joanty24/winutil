@@ -8,7 +8,7 @@
 <#
 .NOTES
     GitHub         : https://github.com/Joanty24/winutil
-    Version        : 230909_2117-Joan
+    Version        : 230909_2130-Joan
 #>
 
 Start-Transcript $ENV:TEMP\Winutil.log -Append
@@ -19,7 +19,7 @@ Add-Type -AssemblyName System.Windows.Forms
 # variable to sync between runspaces
 $sync = [Hashtable]::Synchronized(@{})
 $sync.PSScriptRoot = $PSScriptRoot
-$sync.version = "230909_2117-Joan"
+$sync.version = "230909_2130-Joan"
 $sync.configs = @{}
 $sync.ProcessRunning = $false
 
@@ -2288,10 +2288,10 @@ $inputXML = '<Window x:Class="WinUtility.MainWindow"
                                 <RowDefinition Height=".90*"/>
                             </Grid.RowDefinitions>
                             <StackPanel Background="{MainBackgroundColor}" Orientation="Horizontal" Grid.Row="0" HorizontalAlignment="Center" Grid.Column="0" Grid.ColumnSpan="3" Margin="8">
-                                <Button Name="WPFinstall" Content=" Instal?la Seleccio " Margin="7"/>
+                                <Button Name="WPFinstall" Content=" Instal-la Seleccio " Margin="7"/>
                                 <Button Name="WPFInstallUpgrade" Content=" Actualitza Tot " Margin="7"/>
-                                <Button Name="WPFuninstall" Content=" Desinstal?la Seleccio " Margin="7"/>
-                                <Button Name="WPFGetInstalled" Content=" Instal?lats Ara " Margin="7"/>
+                                <Button Name="WPFuninstall" Content=" Desinstal-la Seleccio " Margin="7"/>
+                                <Button Name="WPFGetInstalled" Content=" Instal-lats Ara " Margin="7"/>
                                 <Button Name="WPFclearWinget" Content=" Esclarir Seleccio " Margin="7"/>
                             </StackPanel>
                             <StackPanel Background="{MainBackgroundColor}" SnapsToDevicePixels="True" Grid.Row="1" Grid.Column="0" Margin="9">
@@ -2350,7 +2350,7 @@ $inputXML = '<Window x:Class="WinUtility.MainWindow"
                                 <CheckBox Name="WPFInstallbleachbit" Content="BleachBit" Margin="5,0" ToolTip="Netejador de disc"/>
                                 <CheckBox Name="WPFInstallexplorer" Content="Double Commander" Margin="5,0" ToolTip="Explorador de fitxers"/>
                                 <CheckBox Name="WPFInstallwindir" Content="WinDirStat" Margin="5,0" ToolTip="Gestor d''emmagatzematge"/>
-                                <CheckBox Name="WPFInstallbulkcrap" Content="Bulk Crap Uninstaller" Margin="5,0" ToolTip="Desinstal?lador de programes"/>
+                                <CheckBox Name="WPFInstallbulkcrap" Content="Bulk Crap Uninstaller" Margin="5,0" ToolTip="Desinstal-lador de programes"/>
                                 <CheckBox Name="WPFInstallrufus" Content="Rufus" Margin="5,0" ToolTip="Bootable USB"/>
                                 <CheckBox Name="WPFInstallrustdesk" Content="RustDesk" Margin="5,0" ToolTip="Escriptori remot"/>
                                 <CheckBox Name="WPFInstallautohotkey" Content="AutoHotKey" Margin="5,0" ToolTip="Scrips de teclat"/>

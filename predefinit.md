@@ -1,6 +1,6 @@
 # Predeterminats
 ## Aplicacions
-### La meva sel·leccio personal
+### La meva sel-leccio personal
 ## Tweaks
 ### Torre
 "WPFEssTweaksTele",
