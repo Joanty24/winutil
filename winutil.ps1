@@ -8,7 +8,7 @@
 <#
 .NOTES
     GitHub         : https://github.com/Joanty24/winutil
-    Version        : 230909_2344-Joan
+    Version        : 230909_2354-Joan
 #>
 
 Start-Transcript $ENV:TEMP\Winutil.log -Append
@@ -19,7 +19,7 @@ Add-Type -AssemblyName System.Windows.Forms
 # variable to sync between runspaces
 $sync = [Hashtable]::Synchronized(@{})
 $sync.PSScriptRoot = $PSScriptRoot
-$sync.version = "230909_2344-Joan"
+$sync.version = "230909_2354-Joan"
 $sync.configs = @{}
 $sync.ProcessRunning = $false
 
@@ -2270,7 +2270,7 @@ $inputXML = '<Window x:Class="WinUtility.MainWindow"
                         Background="{ButtonTweaksBackgroundColor}" Foreground="{ButtonInstallForegroundColor}" FontWeight="Bold" Name="WPFTab2BT"/>
                     <Button Content="Configuracio" HorizontalAlignment="Left" Height="40" Width="200" 
                         Background="{ButtonConfigBackgroundColor}" Foreground="{ButtonInstallForegroundColor}" FontWeight="Bold" Name="WPFTab3BT"/>
-                    <Button Content="Actualitzacions Windows" HorizontalAlignment="Left" Height="40" Width="300" 
+                    <Button Content="Actualitzacions Windows" HorizontalAlignment="Left" Height="40" Width="250" 
                         Background="{ButtonUpdatesBackgroundColor}" Foreground="{ButtonInstallForegroundColor}" FontWeight="Bold" Name="WPFTab4BT"/>
                 </DockPanel>
                 <TabControl Grid.Row="1" Padding="-1" Name="WPFTabNav" Background="#222222">
@@ -2287,7 +2287,7 @@ $inputXML = '<Window x:Class="WinUtility.MainWindow"
                                 <RowDefinition Height=".10*"/>
                                 <RowDefinition Height=".90*"/>
                             </Grid.RowDefinitions>
-                            <StackPanel Background="{MainBackgroundColor}" Orientation="Horizontal" Grid.Row="0" HorizontalAlignment="Center" Grid.Column="0" Grid.ColumnSpan="3" Margin="8">
+                            <StackPanel Background="{MainBackgroundColor}" Orientation="Horizontal" Grid.Row="0" HorizontalAlignment="Center" Grid.Column="0" Grid.ColumnSpan="2" Margin="8">
                                 <Button Name="WPFinstall" Content=" Instal-la Seleccio " Margin="7"/>
                                 <Button Name="WPFInstallUpgrade" Content=" Actualitza Tot " Margin="7"/>
                                 <Button Name="WPFuninstall" Content=" Desinstal-la Seleccio " Margin="7"/>
@@ -2355,8 +2355,8 @@ $inputXML = '<Window x:Class="WinUtility.MainWindow"
                                 <CheckBox Name="WPFInstallrustdesk" Content="RustDesk" Margin="5,0" ToolTip="Escriptori remot"/>
                                 <CheckBox Name="WPFInstallautohotkey" Content="AutoHotKey" Margin="5,0" ToolTip="Scrips de teclat"/>
                             </StackPanel>
-                            <StackPanel Background="{MainBackgroundColor}" Orientation="Horizontal" Grid.Row="0" HorizontalAlignment="Center" Grid.Column="3" Grid.ColumnSpan="2" Margin="8">
-                                <TextBlock Padding="9">
+                            <StackPanel Background="{MainBackgroundColor}" Orientation="Horizontal" Grid.Row="0" HorizontalAlignment="Center" Grid.Column="3" Grid.ColumnSpan="1" Margin="8">
+                                <TextBlock Padding="5">
                                     Passa el punter per sobre dels noms per obtindre una descripcio.
                                 </TextBlock>
                             </StackPanel>
@@ -2374,7 +2374,7 @@ $inputXML = '<Window x:Class="WinUtility.MainWindow"
                                 <RowDefinition Height=".10*"/>
                             </Grid.RowDefinitions>
                             <StackPanel Background="{MainBackgroundColor}" Orientation="Horizontal" Grid.Row="0" HorizontalAlignment="Center" Grid.Column="0" Margin="9">
-                                <Label Content="Recommended Selections:" FontSize="17" VerticalAlignment="Center"/>
+                                <Label Content="Recomenacions:" FontSize="17" VerticalAlignment="Center"/>
                                 <Button Name="WPFdesktop" Content=" Torre " Margin="7"/>
                                 <Button Name="WPFlaptop" Content=" Portatil " Margin="7"/>
                                 <Button Name="WPFminimal" Content=" Basic " Margin="7"/>
