@@ -8,7 +8,7 @@
 <#
 .NOTES
     GitHub         : https://github.com/Joanty24/winutil
-    Version        : 230909_1921-Joan
+    Version        : 230909_1933-Joan
 #>
 
 Start-Transcript $ENV:TEMP\Winutil.log -Append
@@ -19,7 +19,7 @@ Add-Type -AssemblyName System.Windows.Forms
 # variable to sync between runspaces
 $sync = [Hashtable]::Synchronized(@{})
 $sync.PSScriptRoot = $PSScriptRoot
-$sync.version = "230909_1921-Joan"
+$sync.version = "230909_1933-Joan"
 $sync.configs = @{}
 $sync.ProcessRunning = $false
 
@@ -1177,8 +1177,21 @@ Write-Host "12) Forcing discovery..."
     Write-Host "================================="
 }
 Function Invoke-WPFFormVariables {
-    Write-Host "====Joan Solana Radu?====="
-    Write-Host "=====Part pr?ctica TDR====="
+Write-Host"     ??? ??????? ?????? ??    ? "
+Write-Host"    ?   ?       ?      ?  ?  ? ?"
+Write-Host"    ?   ?   ?   ?  ?   ?   ??? ?"
+Write-Host" ?  ?   ?  ? ?  ? ???  ?       ?"
+Write-Host"? ???   ?  ???  ?      ?  ?    ?"
+Write-Host"?       ?       ?  ?   ? ? ?   ?"
+Write-Host"??????????????????? ??????  ????"
+Write-Host"                                "
+Write-Host"    ??????? ??????  ??????      "
+Write-Host"   ?       ?      ??   ?  ?     "
+Write-Host"   ??     ??  ?    ?  ? ? ?     "
+Write-Host"     ?   ? ? ? ?   ?   ?????    "
+Write-Host"     ?   ? ? ???   ?    ??  ?   "
+Write-Host"     ?   ? ?       ?   ?  ? ?   "
+Write-Host"     ????? ?????????????  ???   "
 }
 function Invoke-WPFGetInstalled {
     <#
@@ -2285,7 +2298,7 @@ $inputXML = '<Window x:Class="WinUtility.MainWindow"
                                 <Button Name="WPFimportWinget" Content=" Import " Margin="7"/>
                                 <Button Name="WPFexportWinget" Content=" Export " Margin="7"/>
                             </StackPanel>
-                            <StackPanel Background="{MainBackgroundColor}" Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Center" Grid.ColumnSpan="2" Margin="9">
+                            <StackPanel Background="{MainBackgroundColor}" Orientation="Horizontal" Grid.Row="3" HorizontalAlignment="Center" Grid.Column="0" Grid.ColumnSpan="3" Margin="9">
                                 <TextBlock Padding="9">
                                     Passa el punter per sobre dels noms per obtindre una descripcio.
                                 </TextBlock>
