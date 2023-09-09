@@ -8,7 +8,7 @@
 <#
 .NOTES
     GitHub         : https://github.com/Joanty24/winutil
-    Version        : 230910_0043-Joan
+    Version        : 230910_0107-Joan
 #>
 
 Start-Transcript $ENV:TEMP\Winutil.log -Append
@@ -19,7 +19,7 @@ Add-Type -AssemblyName System.Windows.Forms
 # variable to sync between runspaces
 $sync = [Hashtable]::Synchronized(@{})
 $sync.PSScriptRoot = $PSScriptRoot
-$sync.version = "230910_0043-Joan"
+$sync.version = "230910_0107-Joan"
 $sync.configs = @{}
 $sync.ProcessRunning = $false
 
@@ -2443,7 +2443,8 @@ $inputXML = '<Window x:Class="WinUtility.MainWindow"
                                 <CheckBox Name="WPFMiscTweaksDisableMouseAcceleration" Content="Disable Mouse Acceleration" Margin="5,0" ToolTip="Disables Mouse Acceleration."/>
                                 <CheckBox Name="WPFMiscTweaksEnableMouseAcceleration" Content="Enable Mouse Acceleration" Margin="5,0" ToolTip="Enables Mouse Acceleration."/>
                                 <CheckBox Name="WPFMiscTweaksEnableVerboselogon" Content="Enable Verbose logon messages" Margin="5,0" ToolTip="Enables verbose logon messages."/>
-                                <Label Content="DNS" />
+                                <CheckBox Name="WPFMiscTweaksDisableipsix" Content="Disable IPv6" Margin="5,0" ToolTip="Disables IPv6."/>
+                                <Label Content="DNS"/>
 							    <ComboBox Name="WPFchangedns"  Height = "20" Width = "160" HorizontalAlignment = "Left" Margin="5,5"> 
 								    <ComboBoxItem IsSelected="True" Content = "Default"/> 
                                     <ComboBoxItem Content = "DHCP"/> 
@@ -2500,20 +2501,18 @@ $inputXML = '<Window x:Class="WinUtility.MainWindow"
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
                             <StackPanel Background="{MainBackgroundColor}" SnapsToDevicePixels="True" Grid.Column="0" Margin="10,5">
-                                <Button Name="WPFUpdatesdefault" FontSize="16" Content="Default (Out of Box) Settings" Margin="20,4,20,10" Padding="9"/>
+                                <Button Name="WPFUpdatesdefault" FontSize="16" Content="Actualitzacions predeterminades" Margin="20,4,20,10" Padding="9"/>
                                 <TextBlock Margin="20,0,20,0" Padding="9" TextWrapping="WrapWithOverflow" MaxWidth="300">Opcio predeterminada de Windows.<LineBreak/><LineBreak/>Restablira la configuracio predeterminada de Windows.<LineBreak/><LineBreak/>Note: If you still encounter update errors, reset all updates in the config tab. That will restore ALL Microsoft Update Services from their servers and reinstall them to default settings.</TextBlock>
                             </StackPanel>
                             <StackPanel Background="{MainBackgroundColor}" SnapsToDevicePixels="True" Grid.Column="1" Margin="10,5">
-                                <Button Name="WPFUpdatessecurity" FontSize="16" Content="Security (Recommended) Settings" Margin="20,4,20,10" Padding="9"/>
+                                <Button Name="WPFUpdatessecurity" FontSize="16" Content="Actualitzacions de seguretat" Margin="20,4,20,10" Padding="9"/>
                                 <TextBlock Margin="20,0,20,0" Padding="9" TextWrapping="WrapWithOverflow" MaxWidth="300">Opcio recomenada si vols un sistema "estable".<LineBreak/><LineBreak/>It will delay feature updates by 2 years and will install security updates 4 days after release.<LineBreak/><LineBreak/>Feature Updates: Adds features and often bugs to systems when they are released. You want to delay these as long as possible.<LineBreak/><LineBreak/>Security Updates: Typically these are pressing security flaws that need to be patched quickly. You only want to delay these a couple of days just to see if they are safe and don''t break other systems. You don''t want to go without these for ANY extended periods of time.</TextBlock>
                             </StackPanel>
                             <StackPanel Background="{MainBackgroundColor}" SnapsToDevicePixels="True" Grid.Column="2" Margin="10,5">
-                                <Button Name="WPFUpdatesdisable" FontSize="16" Content="Disable ALL Updates (NOT RECOMMENDED!)" Margin="20,4,20,10" Padding="10,10,10,10"/>
-                                <TextBlock Margin="20,0,20,0" Padding="9" TextWrapping="WrapWithOverflow" MaxWidth="300">Desactiva TOTES les actualitzacions de Windows, NO RECOMENAT.<LineBreak/><LineBreak/>Pot ser util en determinats casos si el sistema no esta connectat a internet.<LineBreak/><LineBreak/>Note: Your system will be easier to hack and infect without security updates.</TextBlock>
+                                <Button Name="WPFUpdatesdisable" FontSize="16" Content="CAP actualitzacio (NO RECOMENAT!)" Margin="20,4,20,10" Padding="10,10,10,10"/>
+                                <TextBlock Margin="20,0,20,0" Padding="9" TextWrapping="WrapWithOverflow" MaxWidth="300">Desactiva TOTES les actualitzacions de Windows, NO RECOMENAT!<LineBreak/><LineBreak/>Pot ser util en determinats casos si el sistema no esta connectat a internet.<LineBreak/><LineBreak/>Note: Your system will be easier to hack and infect without security updates.</TextBlock>
                                 <TextBlock Text=" " Margin="20,0,20,0" Padding="9" TextWrapping="WrapWithOverflow" MaxWidth="300"/>
-
                             </StackPanel>
-
                         </Grid>
                     </TabItem>
                 </TabControl>
@@ -5231,6 +5230,18 @@ $sync.configs.tweaks = '{
         "Type": "DWORD",
         "Value": "0"
       }
+    ]
+  },
+  "WPFMiscTweaksDisableipsix": {
+    "InvokeScript": [
+      "netsh interface teredo set state disabled",
+      "netsh interface ipv6 6to4 set state state=disabled undoonstop=disabled",
+      "netsh interface ipv6 isatap set state state=disabled"
+    ],
+    "UndoScript": [
+      "netsh interface teredo set state enabled",
+      "netsh interface ipv6 6to4 set state state=enabled undoonstop=enabled",
+      "netsh interface ipv6 isatap set state state=enabled"
     ]
   }
 }' | convertfrom-json
