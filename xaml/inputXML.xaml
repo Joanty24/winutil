@@ -237,18 +237,12 @@
                                 <RowDefinition Height=".10*"/>
                                 <RowDefinition Height=".90*"/>
                             </Grid.RowDefinitions>
-                            <StackPanel Background="{MainBackgroundColor}" Orientation="Horizontal" Grid.Row="0" HorizontalAlignment="Center" Grid.Column="0" Grid.ColumnSpan="3" Margin="9">
-                                <Label Content="Winget:" FontSize="17" VerticalAlignment="Center"/>
-                                <Button Name="WPFinstall" Content=" Install Selection " Margin="7"/>
-                                <Button Name="WPFInstallUpgrade" Content=" Upgrade All " Margin="7"/>
-                                <Button Name="WPFuninstall" Content=" Uninstall Selection " Margin="7"/>
-                                <Button Name="WPFGetInstalled" Content=" Get Installed " Margin="7"/>
+                            <StackPanel Background="{MainBackgroundColor}" Orientation="Horizontal" Grid.Row="0" HorizontalAlignment="Center" Grid.Column="0" Grid.ColumnSpan="3" Margin="8">
+                                <Button Name="WPFinstall" Content=" Instal·la Seleccio " Margin="7"/>
+                                <Button Name="WPFInstallUpgrade" Content=" Actualitza Tot " Margin="7"/>
+                                <Button Name="WPFuninstall" Content=" Desinstal·la Seleccio " Margin="7"/>
+                                <Button Name="WPFGetInstalled" Content=" Instal·lats Ara " Margin="7"/>
                                 <Button Name="WPFclearWinget" Content=" Esclarir Seleccio " Margin="7"/>
-                            </StackPanel>
-                            <StackPanel Background="{MainBackgroundColor}" Orientation="Horizontal" Grid.Row="0" HorizontalAlignment="Center" Grid.Column="3" Grid.ColumnSpan="2" Margin="9">
-                                <Label Content="Configuration File:" FontSize="17" VerticalAlignment="Center"/>
-                                <Button Name="WPFimportWinget" Content=" Import " Margin="7"/>
-                                <Button Name="WPFexportWinget" Content=" Export " Margin="7"/>
                             </StackPanel>
                             <StackPanel Background="{MainBackgroundColor}" SnapsToDevicePixels="True" Grid.Row="1" Grid.Column="0" Margin="9">
                                 <Label Content="Navegadors" FontSize="16" Margin="5,0"/>
@@ -311,7 +305,7 @@
                                 <CheckBox Name="WPFInstallrustdesk" Content="RustDesk" Margin="5,0" ToolTip="Escriptori remot"/>
                                 <CheckBox Name="WPFInstallautohotkey" Content="AutoHotKey" Margin="5,0" ToolTip="Scrips de teclat"/>
                             </StackPanel>
-                            <StackPanel Background="{MainBackgroundColor}" Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center" Grid.ColumnSpan="2" Margin="9">
+                            <StackPanel Background="{MainBackgroundColor}" Orientation="Horizontal" Grid.Row="0" HorizontalAlignment="Center" Grid.Column="3" Grid.ColumnSpan="2" Margin="8">
                                 <TextBlock Padding="9">
                                     Passa el punter per sobre dels noms per obtindre una descripcio.
                                 </TextBlock>

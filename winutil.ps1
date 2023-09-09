@@ -8,7 +8,7 @@
 <#
 .NOTES
     GitHub         : https://github.com/Joanty24/winutil
-    Version        : 230909_2106-Joan
+    Version        : 230909_2117-Joan
 #>
 
 Start-Transcript $ENV:TEMP\Winutil.log -Append
@@ -19,7 +19,7 @@ Add-Type -AssemblyName System.Windows.Forms
 # variable to sync between runspaces
 $sync = [Hashtable]::Synchronized(@{})
 $sync.PSScriptRoot = $PSScriptRoot
-$sync.version = "230909_2106-Joan"
+$sync.version = "230909_2117-Joan"
 $sync.configs = @{}
 $sync.ProcessRunning = $false
 
@@ -1180,17 +1180,17 @@ function Invoke-WPFFormVariables{
 Write-Host ""
 Write-Host ""
 Write-Host "    d88b  .d88b.   .d8b.  d8b   db "
-Write-Host "      `8P' .8P  Y8. d8' `8b 888o  88 "
+Write-Host "     8P' .8P  Y8. d8'  8b 888o  88 "
 Write-Host "     88  88    88 88ooo88 88V8o 88 "
 Write-Host "     88  88    88 88~~~88 88 V8o88 "
-Write-Host "  db. 88  `8b  d8' 88   88 88  V888 "
-Write-Host "  Y8888P   `Y88P'  YP   YP VP   V8P "
+Write-Host " db. 88   8b  d8' 88   88 88  V888 "
+Write-Host " Y8888P    Y88P'  YP   YP VP   V8P "
 Write-Host ""
 Write-Host "     d888888b d8888b. d8888b.      "
-Write-Host "      `~~88~~' 88  `8D 88  `8D      "
+Write-Host "      ~~88~~' 88   8D 88   8D      "
 Write-Host "        88    88   88 88oobY'      "
-Write-Host "        88    88   88 88`8b        "
-Write-Host "        88    88  .8D 88 `88.      "
+Write-Host "        88    88   88 88 8b        "
+Write-Host "        88    88  .8D 88  88.      "
 Write-Host "        YP    Y8888D' 88   YD      "
 Write-Host ""
 Write-Host ""
@@ -2287,18 +2287,12 @@ $inputXML = '<Window x:Class="WinUtility.MainWindow"
                                 <RowDefinition Height=".10*"/>
                                 <RowDefinition Height=".90*"/>
                             </Grid.RowDefinitions>
-                            <StackPanel Background="{MainBackgroundColor}" Orientation="Horizontal" Grid.Row="0" HorizontalAlignment="Center" Grid.Column="0" Grid.ColumnSpan="3" Margin="9">
-                                <Label Content="Winget:" FontSize="17" VerticalAlignment="Center"/>
-                                <Button Name="WPFinstall" Content=" Install Selection " Margin="7"/>
-                                <Button Name="WPFInstallUpgrade" Content=" Upgrade All " Margin="7"/>
-                                <Button Name="WPFuninstall" Content=" Uninstall Selection " Margin="7"/>
-                                <Button Name="WPFGetInstalled" Content=" Get Installed " Margin="7"/>
+                            <StackPanel Background="{MainBackgroundColor}" Orientation="Horizontal" Grid.Row="0" HorizontalAlignment="Center" Grid.Column="0" Grid.ColumnSpan="3" Margin="8">
+                                <Button Name="WPFinstall" Content=" Instal?la Seleccio " Margin="7"/>
+                                <Button Name="WPFInstallUpgrade" Content=" Actualitza Tot " Margin="7"/>
+                                <Button Name="WPFuninstall" Content=" Desinstal?la Seleccio " Margin="7"/>
+                                <Button Name="WPFGetInstalled" Content=" Instal?lats Ara " Margin="7"/>
                                 <Button Name="WPFclearWinget" Content=" Esclarir Seleccio " Margin="7"/>
-                            </StackPanel>
-                            <StackPanel Background="{MainBackgroundColor}" Orientation="Horizontal" Grid.Row="0" HorizontalAlignment="Center" Grid.Column="3" Grid.ColumnSpan="2" Margin="9">
-                                <Label Content="Configuration File:" FontSize="17" VerticalAlignment="Center"/>
-                                <Button Name="WPFimportWinget" Content=" Import " Margin="7"/>
-                                <Button Name="WPFexportWinget" Content=" Export " Margin="7"/>
                             </StackPanel>
                             <StackPanel Background="{MainBackgroundColor}" SnapsToDevicePixels="True" Grid.Row="1" Grid.Column="0" Margin="9">
                                 <Label Content="Navegadors" FontSize="16" Margin="5,0"/>
@@ -2361,7 +2355,7 @@ $inputXML = '<Window x:Class="WinUtility.MainWindow"
                                 <CheckBox Name="WPFInstallrustdesk" Content="RustDesk" Margin="5,0" ToolTip="Escriptori remot"/>
                                 <CheckBox Name="WPFInstallautohotkey" Content="AutoHotKey" Margin="5,0" ToolTip="Scrips de teclat"/>
                             </StackPanel>
-                            <StackPanel Background="{MainBackgroundColor}" Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center" Grid.ColumnSpan="2" Margin="9">
+                            <StackPanel Background="{MainBackgroundColor}" Orientation="Horizontal" Grid.Row="0" HorizontalAlignment="Center" Grid.Column="3" Grid.ColumnSpan="2" Margin="8">
                                 <TextBlock Padding="9">
                                     Passa el punter per sobre dels noms per obtindre una descripcio.
                                 </TextBlock>
