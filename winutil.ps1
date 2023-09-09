@@ -8,7 +8,7 @@
 <#
 .NOTES
     GitHub         : https://github.com/Joanty24/winutil
-    Version        : 230909_2130-Joan
+    Version        : 230909_2344-Joan
 #>
 
 Start-Transcript $ENV:TEMP\Winutil.log -Append
@@ -19,7 +19,7 @@ Add-Type -AssemblyName System.Windows.Forms
 # variable to sync between runspaces
 $sync = [Hashtable]::Synchronized(@{})
 $sync.PSScriptRoot = $PSScriptRoot
-$sync.version = "230909_2130-Joan"
+$sync.version = "230909_2344-Joan"
 $sync.configs = @{}
 $sync.ProcessRunning = $false
 
@@ -2264,13 +2264,13 @@ $inputXML = '<Window x:Class="WinUtility.MainWindow"
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <DockPanel Background="{MainBackgroundColor}" SnapsToDevicePixels="True" Grid.Row="0" Width="1000">
-                    <Button Content="Install" HorizontalAlignment="Left" Height="40" Width="100" 
+                    <Button Content="Aplicacions" HorizontalAlignment="Left" Height="40" Width="200" 
                         Background="{ButtonInstallBackgroundColor}" Foreground="{ButtonInstallForegroundColor}" FontWeight="Bold" Name="WPFTab1BT"/>
-                    <Button Content="Tweaks" HorizontalAlignment="Left" Height="40" Width="100" 
+                    <Button Content="Ajustaments" HorizontalAlignment="Left" Height="40" Width="200" 
                         Background="{ButtonTweaksBackgroundColor}" Foreground="{ButtonInstallForegroundColor}" FontWeight="Bold" Name="WPFTab2BT"/>
-                    <Button Content="Config" HorizontalAlignment="Left" Height="40" Width="100" 
+                    <Button Content="Configuracio" HorizontalAlignment="Left" Height="40" Width="200" 
                         Background="{ButtonConfigBackgroundColor}" Foreground="{ButtonInstallForegroundColor}" FontWeight="Bold" Name="WPFTab3BT"/>
-                    <Button Content="Updates" HorizontalAlignment="Left" Height="40" Width="100" 
+                    <Button Content="Actualitzacions Windows" HorizontalAlignment="Left" Height="40" Width="300" 
                         Background="{ButtonUpdatesBackgroundColor}" Foreground="{ButtonInstallForegroundColor}" FontWeight="Bold" Name="WPFTab4BT"/>
                 </DockPanel>
                 <TabControl Grid.Row="1" Padding="-1" Name="WPFTabNav" Background="#222222">
