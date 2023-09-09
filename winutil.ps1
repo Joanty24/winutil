@@ -8,7 +8,7 @@
 <#
 .NOTES
     GitHub         : https://github.com/Joanty24/winutil
-    Version        : 230909_1944-Joan
+    Version        : 230909_2002-Joan
 #>
 
 Start-Transcript $ENV:TEMP\Winutil.log -Append
@@ -19,7 +19,7 @@ Add-Type -AssemblyName System.Windows.Forms
 # variable to sync between runspaces
 $sync = [Hashtable]::Synchronized(@{})
 $sync.PSScriptRoot = $PSScriptRoot
-$sync.version = "230909_1944-Joan"
+$sync.version = "230909_2002-Joan"
 $sync.configs = @{}
 $sync.ProcessRunning = $false
 
@@ -1176,21 +1176,23 @@ Write-Host "12) Forcing discovery..."
     Write-Host "-- Reset ALL Updates to Factory -"
     Write-Host "================================="
 }
-Function Invoke-WPFFormVariables {
-Write-Host"    d88b  .d88b.   .d8b.  d8b   db "
-Write-Host"    `8P' .8P  Y8. d8' `8b 888o  88 "
-Write-Host"     88  88    88 88ooo88 88V8o 88 "
-Write-Host"     88  88    88 88~~~88 88 V8o88 "
-Write-Host" db. 88  `8b  d8' 88   88 88  V888 "
-Write-Host" Y8888P   `Y88P'  YP   YP VP   V8P "
-Write-Host"                                   "
-Write-Host"                                   "
-Write-Host"      d888888b d8888b. d8888b.     "
-Write-Host"      `~~88~~' 88  `8D 88  `8D     "
-Write-Host"         88    88   88 88oobY'     "
-Write-Host"         88    88   88 88`8b       "
-Write-Host"         88    88  .8D 88 `88.     "
-Write-Host"         YP    Y8888D' 88   YD     "
+function Invoke-WPFFormVariables{
+Write-Host"   ###                      "
+Write-Host"     #                      "
+Write-Host"     #   ###    ###   # ##  "
+Write-Host"     #  #   #      #  ##  # "
+Write-Host"     #  #   #   ####  #   # "
+Write-Host" #   #  #   #  #   #  #   # "
+Write-Host"  ###    ###    ####  #   # "
+Write-Host"                            "
+Write-Host"                            "
+Write-Host"    #####  ####   ####      "
+Write-Host"      #     #  #  #   #     "
+Write-Host"      #     #  #  #   #     "
+Write-Host"      #     #  #  ####      "
+Write-Host"      #     #  #  # #       "
+Write-Host"      #     #  #  #  #      "
+Write-Host"      #    ####   #   #     "
 }
 function Invoke-WPFGetInstalled {
     <#
@@ -2298,9 +2300,7 @@ $inputXML = '<Window x:Class="WinUtility.MainWindow"
                                 <Button Name="WPFexportWinget" Content=" Export " Margin="7"/>
                             </StackPanel>
                             <StackPanel Background="{MainBackgroundColor}" Orientation="Horizontal" Grid.Row="3" HorizontalAlignment="Center" Grid.Column="4" Grid.ColumnSpan="4" Margin="9">
-                                <TextBlock Padding="9">
-                                    Passa el punter per sobre dels noms per obtindre una descripcio.
-                                </TextBlock>
+                                <Label Content="Passa el punter per sobre dels noms per obtindre una descripcio." FontSize="16" VerticalAlignment="Center"/>
                             </StackPanel>
                             <StackPanel Background="{MainBackgroundColor}" SnapsToDevicePixels="True" Grid.Row="1" Grid.Column="0" Margin="9">
                                 <Label Content="Navegadors" FontSize="16" Margin="5,0"/>

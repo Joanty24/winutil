@@ -251,9 +251,7 @@
                                 <Button Name="WPFexportWinget" Content=" Export " Margin="7"/>
                             </StackPanel>
                             <StackPanel Background="{MainBackgroundColor}" Orientation="Horizontal" Grid.Row="3" HorizontalAlignment="Center" Grid.Column="4" Grid.ColumnSpan="4" Margin="9">
-                                <TextBlock Padding="9">
-                                    Passa el punter per sobre dels noms per obtindre una descripcio.
-                                </TextBlock>
+                                <Label Content="Passa el punter per sobre dels noms per obtindre una descripcio." FontSize="16" VerticalAlignment="Center"/>
                             </StackPanel>
                             <StackPanel Background="{MainBackgroundColor}" SnapsToDevicePixels="True" Grid.Row="1" Grid.Column="0" Margin="9">
                                 <Label Content="Navegadors" FontSize="16" Margin="5,0"/>
