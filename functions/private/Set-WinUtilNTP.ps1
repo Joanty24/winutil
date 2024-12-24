@@ -4,7 +4,7 @@ function Set-WinUtilNTP{
     .SYNOPSIS
         Sets the NTP server. It will lookup the values from the ntp.Json file
 
-    .PARAMETER DNSProvider
+    .PARAMETER NTPProvider
         The NTP provider to set the NTP server to
 
     .EXAMPLE

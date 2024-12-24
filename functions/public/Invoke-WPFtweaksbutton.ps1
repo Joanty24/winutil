@@ -17,12 +17,12 @@ function Invoke-WPFtweaksbutton {
   Set-WinUtilDNS -DNSProvider $sync["WPFchangedns"].text
   Set-WinUtilNTP -NTPProvider $sync["WPFchangenntp"].text
 
-  if ($tweaks.count -eq 0 -and  $sync["WPFchangedns"].text -eq "Default") {
+  if ($tweaks.count -eq 0 -and  $sync["WPFchangedns"].text -eq "Default" -and  $sync["WPFchangentp"].text -eq "Default") {
     $msg = "Please check the tweaks you wish to perform."
     [System.Windows.MessageBox]::Show($msg, "Winutil", [System.Windows.MessageBoxButton]::OK, [System.Windows.MessageBoxImage]::Warning)
     return
   }
-
+  
   Write-Debug "Number of tweaks to process: $($Tweaks.Count)"
 
   # The leading "," in the ParameterList is nessecary because we only provide one argument and powershell cannot be convinced that we want a nested loop with only one argument otherwise
