@@ -14,11 +14,15 @@ function Set-WinUtilNTP{
     param($NTPProvider)
     if($NTPProvider -eq "Default") {return}
     try {
-        net stop w32time
-        w32tm /config /manualpeerlist:"$($sync.configs.ntp.$NTPProvider.Server)" /syncfromflags:manual /update
-        net start w32time
-        w32tm /resync
-        w32tm /tz
+        Push-Location
+        Set-Location HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\DateTime\Servers
+        Set-ItemProperty . 0 "$($sync.configs.ntp.$NTPProvider.Server)"
+        Set-ItemProperty . "(Default)" "0"
+        Set-Location HKLM:\SYSTEM\CurrentControlSet\services\W32Time\Parameters
+        Set-ItemProperty . NtpServer "$($sync.configs.ntp.$NTPProvider.Server)"
+        Pop-Location
+        Stop-Service w32time
+        Start-Service w32time
     } catch {
         Write-Warning "Unable to set NTP server due to an unhandled exception"
         Write-Warning $psitem.Exception.StackTrace
