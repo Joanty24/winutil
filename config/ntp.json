@@ -1,0 +1,23 @@
+{
+    "Default":{
+        "Server": "time.windows.com"
+    },
+    "NTP_Pool_Project":{
+        "Server": "pool.ntp.org"
+    },
+    "NIST":{
+        "Server": "time.nist.gov"
+    },
+    "Google":{
+        "Server": "time.google.com"
+    },
+    "Cloudflare":{
+        "Server": "time.cloudflare.com"
+    },
+    "Apple":{
+        "Server": "time.apple.com"
+    },
+    "Amazon":{
+        "Server": "time.aws.com"
+    }
+}
