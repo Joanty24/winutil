@@ -14,6 +14,8 @@ function Set-WinUtilNTP{
     param($NTPProvider)
     if($NTPProvider -eq "Default") {return}
     try {
+        Set-HcsNtpClientServerAddress -Primary "$($sync.configs.ntp.$NTPProvider.Server)"
+        net stop w32time && net start w32time
         Push-Location
         Set-Location HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\DateTime\Servers
         Set-ItemProperty . 0 "$($sync.configs.ntp.$NTPProvider.Server)"
