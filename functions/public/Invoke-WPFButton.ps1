@@ -33,7 +33,7 @@ function Invoke-WPFButton {
         "WPFRemoveUltPerf" {Invoke-WPFUltimatePerformance -State "Disable"}
         "WPFundoall" {Invoke-WPFundoall}
         "WPFFeatureInstall" {Invoke-WPFFeatureInstall}
-        "WPFPanelDISM" {Invoke-WPFPanelDISM}
+        "WPFPanelDISM" {Invoke-WPFSystemRepair}
         "WPFPanelAutologin" {Invoke-WPFPanelAutologin}
         "WPFPanelcontrol" {Invoke-WPFControlPanel -Panel $button}
         "WPFPanelnetwork" {Invoke-WPFControlPanel -Panel $button}
@@ -43,6 +43,7 @@ function Invoke-WPFButton {
         "WPFPanelprinter" {Invoke-WPFControlPanel -Panel $button}
         "WPFPanelsystem" {Invoke-WPFControlPanel -Panel $button}
         "WPFPaneluser" {Invoke-WPFControlPanel -Panel $button}
+        "WPFPanelGodMode" {Invoke-WPFControlPanel -Panel $button}
         "WPFUpdatesdefault" {Invoke-WPFFixesUpdate}
         "WPFFixesUpdate" {Invoke-WPFFixesUpdate}
         "WPFFixesWinget" {Invoke-WPFFixesWinget}
@@ -59,6 +60,7 @@ function Invoke-WPFButton {
         "MicrowinScratchDirBT" {Invoke-ScratchDialog}
         "WPFWinUtilInstallPSProfile" {Invoke-WinUtilInstallPSProfile}
         "WPFWinUtilUninstallPSProfile" {Invoke-WinUtilUninstallPSProfile}
-        "WPFWinUtilSSHServer" {Invoke-WinUtilSSHServer}
+        "WPFWinUtilSSHServer" {Invoke-WPFSSHServer}
+        "WPFselectedAppsButton" {$sync.selectedAppsPopup.IsOpen = -not $sync.selectedAppsPopup.IsOpen}
     }
 }

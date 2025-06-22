@@ -54,7 +54,7 @@ function Microwin-NewFirstRun {
 
     try
     {
-        if ((Get-WindowsOptionalFeature -Online | Where-Object { $_.FeatureName -like "Recall" }).Count -gt 0)
+        if ((Get-WindowsOptionalFeature -Online | Where-Object { $_.State -eq 'Enabled' -and $_.FeatureName -like "Recall" }).Count -gt 0)
         {
             Disable-WindowsOptionalFeature -Online -FeatureName "Recall" -Remove
         }
@@ -63,6 +63,29 @@ function Microwin-NewFirstRun {
     {
 
     }
+
+    # Get BCD entries and set bootmgr timeout accordingly
+    try
+    {
+        # Check if the number of occurrences of "path" is 2 - this fixes the Boot Manager screen issue (#2562)
+        if ((bcdedit | Select-String "path").Count -eq 2)
+        {
+            # Set bootmgr timeout to 0
+            bcdedit /set `{bootmgr`} timeout 0
+        }
+    }
+    catch
+    {
+
+    }
+
+    reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Notifications\Settings\Windows.SystemToast.Suggested" /f
+    reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Notifications\Settings\Windows.SystemToast.Suggested" /v Enabled /t REG_DWORD /d 0 /f
+    reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Notifications\Settings\Windows.SystemToast.StartupApp" /f
+    reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Notifications\Settings\Windows.SystemToast.StartupApp" /v Enabled /t REG_DWORD /d 0 /f
+    reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Notifications\Settings\Microsoft.SkyDrive.Desktop" /f
+    reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Notifications\Settings\Microsoft.SkyDrive.Desktop" /v Enabled /t REG_DWORD /d 0 /f
+
 '@
     $firstRun | Out-File -FilePath "$env:temp\FirstStartup.ps1" -Force
 }
