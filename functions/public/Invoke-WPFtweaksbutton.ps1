@@ -22,7 +22,7 @@ function Invoke-WPFtweaksbutton {
     [System.Windows.MessageBox]::Show($msg, "Winutil", [System.Windows.MessageBoxButton]::OK, [System.Windows.MessageBoxImage]::Warning)
     return
   }
-  
+
   Write-Debug "Number of tweaks to process: $($Tweaks.Count)"
 
   # The leading "," in the ParameterList is nessecary because we only provide one argument and powershell cannot be convinced that we want a nested loop with only one argument otherwise

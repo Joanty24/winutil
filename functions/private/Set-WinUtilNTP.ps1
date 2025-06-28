@@ -14,17 +14,12 @@ function Set-WinUtilNTP{
     param($NTPProvider)
     if($NTPProvider -eq "Default") {return}
     try {
-        Set-HcsNtpClientServerAddress -Primary "$($sync.configs.ntp.$NTPProvider.Server)"
-        net stop w32time && net start w32time
-        Push-Location
-        Set-Location HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\DateTime\Servers
-        Set-ItemProperty . 0 "$($sync.configs.ntp.$NTPProvider.Server)"
-        Set-ItemProperty . "(Default)" "0"
-        Set-Location HKLM:\SYSTEM\CurrentControlSet\services\W32Time\Parameters
-        Set-ItemProperty . NtpServer "$($sync.configs.ntp.$NTPProvider.Server)"
-        Pop-Location
-        Stop-Service w32time
-        Start-Service w32time
+        reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\DateTime\Servers" /v 3 /t REG_SZ /d "$($sync.configs.ntp.$NTPProvider.Server)" /f
+        reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Parameters" /v NtpServer /t REG_SZ /d "$($sync.configs.ntp.$NTPProvider.Server)" /f
+        w32tm /config /manualpeerlist:"$($sync.configs.ntp.$NTPProvider.Server)" /syncfromflags:manual /update
+        net stop w32time
+        net start w32time
+        w32tm /resync /force
     } catch {
         Write-Warning "Unable to set NTP server due to an unhandled exception"
         Write-Warning $psitem.Exception.StackTrace
