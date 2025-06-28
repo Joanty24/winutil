@@ -1,5 +1,5 @@
 {
-    "Default":{
+    "Windows":{
         "Server": "time.windows.com"
     },
     "NTP_Pool_Project":{

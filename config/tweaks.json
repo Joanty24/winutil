@@ -3848,7 +3848,7 @@
     "panel": "1",
     "Order": "a050_",
     "Type": "Combobox",
-    "ComboItems": "Default NTP_Pool_Project NIST Google Cloudflare Apple Amazon",
+    "ComboItems": "Default Windows NTP_Pool_Project NIST Google Cloudflare Apple Amazon",
     "link": "https://christitustech.github.io/winutil/dev/tweaks/z--Advanced-Tweaks---CAUTION/changentp"
   },
   "WPFAddUltPerf": {

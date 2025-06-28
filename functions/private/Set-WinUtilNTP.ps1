@@ -17,9 +17,7 @@ function Set-WinUtilNTP{
         reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\DateTime\Servers" /v 3 /t REG_SZ /d "$($sync.configs.ntp.$NTPProvider.Server)" /f
         reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Parameters" /v NtpServer /t REG_SZ /d "$($sync.configs.ntp.$NTPProvider.Server)" /f
         w32tm /config /manualpeerlist:"$($sync.configs.ntp.$NTPProvider.Server)" /syncfromflags:manual /update
-        net stop w32time
-        net start w32time
-        w32tm /resync /force
+        Write-Warning "NTP server set to "$($sync.configs.ntp.$NTPProvider.Server)""
     } catch {
         Write-Warning "Unable to set NTP server due to an unhandled exception"
         Write-Warning $psitem.Exception.StackTrace
